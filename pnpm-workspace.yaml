@@ -1,0 +1,10 @@
+packages:
+  - docs-site
+
+ignoredBuiltDependencies:
+  - unrs-resolver
+
+onlyBuiltDependencies:
+  - '@swc/core'
+  - aws-sdk
+  - lefthook
