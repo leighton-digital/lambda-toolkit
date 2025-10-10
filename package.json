@@ -5,7 +5,7 @@
   "description": "Lambda Toolkit is an open-source collection of utility functions designed to help teams write production-ready application code, for deployment to AWS Lambda, faster",
   "type": "commonjs",
   "author": "leighton digital",
-  "homepage": "https://github.com/leighton-digital/lambda-toolkit",
+  "homepage": "https://leighton-digital.github.io/lambda-toolkit/",
   "keywords": [
     "CDK",
     "AWS CDK",

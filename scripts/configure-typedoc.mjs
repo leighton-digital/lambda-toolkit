@@ -13,10 +13,10 @@ import path from 'node:path';
 
 const rootDir = path.resolve(process.cwd());
 const docsRefDir = path.join(rootDir, 'docs', 'reference');
-const packagesDir = path.join(docsRefDir, '01-Utilities');
-const indexMdPath = path.join(docsRefDir, '01-Utilities', 'index.md');
+const packagesDir = path.join(docsRefDir, '01-Documentation');
+const indexMdPath = path.join(docsRefDir, '01-Documentation', 'index.md');
 const packagesMdPath = path.join(packagesDir, 'modules.md');
-const packagesMdRenamedPath = path.join(packagesDir, '01-Utilities.md');
+const packagesMdRenamedPath = path.join(packagesDir, '01-Documentation.md');
 const pagesDir = path.join(rootDir, 'docs-site', 'src', 'pages');
 const readmeSrcPath = path.join(rootDir, 'README.md');
 const readmeDestPath = path.join(pagesDir, 'index.md');
@@ -133,12 +133,12 @@ async function organiseTypeDocRecursively(currentDir, targetParentDir) {
  * up to appropriate levels and removing any empty directories left behind.
  */
 async function organiseTypeDoc() {
-  const baseDir = path.join(docsRefDir, '01-Utilities');
+  const baseDir = path.join(docsRefDir, '01-Documentation');
   await organiseTypeDocRecursively(baseDir, baseDir);
 }
 
 /**
- * Rename modules.md to 01-Utilities.md
+ * Rename modules.md to 01-Documentation.md
  */
 async function renameModulesMarkdown() {
   try {
@@ -153,10 +153,10 @@ async function renameModulesMarkdown() {
 }
 
 /**
- * Process the 01-Utilities.md file to remove any lines containing "_docs".
+ * Process the 01-Documentation.md file to remove any lines containing "_docs".
  */
 async function processModulesMarkdown() {
-  const file = path.join(docsRefDir, '01-Utilities/01-Utilities.md');
+  const file = path.join(docsRefDir, '01-Documentation/01-Documentation.md');
   const content = readFileSync(file, 'utf8');
 
   // Split into lines and filter out lines containing "_docs"
@@ -166,9 +166,8 @@ async function processModulesMarkdown() {
 
   // Fix duplicate text in links and remove index.md from paths
   lines = lines.map((line) => {
-    // Change heading from "## Modules" to "# Constructs"
     if (line.trim() === '## Modules') {
-      return '# Utilities';
+      return '# Documentation';
     }
 
     // Match markdown links and simplify by removing everything after the first /
@@ -288,15 +287,15 @@ async function organiseDocMarkdownFilesRecursively(dir) {
  * Finally, remove any empty __docs directories.
  */
 async function organiseDocMarkdownFiles() {
-  const baseDir = path.join(docsRefDir, '01-Utilities');
+  const baseDir = path.join(docsRefDir, '01-Documentation');
   await organiseDocMarkdownFilesRecursively(baseDir);
 }
 
 /**
- * Delete all index.md files in the docs/reference/01-Utilities directory and its subdirectories.
+ * Delete all index.md files in the docs/reference/01-Documentation directory and its subdirectories.
  */
 async function deleteAllIndexMarkdownFiles() {
-  const baseDir = path.join(docsRefDir, '01-Utilities');
+  const baseDir = path.join(docsRefDir, '01-Documentation');
 
   async function walk(dir) {
     const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -320,7 +319,7 @@ async function deleteAllIndexMarkdownFiles() {
  * Escapes curly braces that MDX interprets as JSX expressions.
  */
 async function fixMdxSyntax() {
-  const baseDir = path.join(docsRefDir, '01-Utilities');
+  const baseDir = path.join(docsRefDir, '01-Documentation');
 
   async function processMarkdownFile(filePath) {
     try {

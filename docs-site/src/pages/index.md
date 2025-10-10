@@ -1,4 +1,4 @@
-<img width="50px" height="50px" align="right" alt="Lambda Toolkit Logo" src="img/lambda-toolkit-logo.png" title="Leighton Lambda Toolkit" sanitize="true" />
+<img width="50px" height="50px" align="right" alt="Lambda Toolkit Logo" src="https://raw.githubusercontent.com/leighton-digital/lambda-toolkit/refs/heads/main/images/lambda-toolkit-logo.png" title="Leighton Lambda Toolkit" sanitize="true" />
 
 # Lambda Toolkit
 
@@ -249,4 +249,4 @@ Contributions are welcome! Please feel free to submit a pull request.
 
 ---
 
-<img src="images/leighton-logo.svg" width="200" sanitize="true" />
+<img src="https://raw.githubusercontent.com/leighton-digital/lambda-toolkit/2578cda7dfd2a63e61912c1289d06f45f357616f/images/leighton-logo.svg" width="200" sanitize="true" />

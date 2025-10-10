@@ -8,14 +8,12 @@ Read more in the docs here: [Lambda Toolkit Docs](https://leighton-digital.githu
 
 ## Features
 
-- Environment-aware configuration utilities for region, stage, and removal policies
-- Built-in error classes for consistent API error responses
-- JSON Schema validation utility
-- Reusable date and time manipulation helpers
-- HTTPS handler wrappers with standardised logging and error handling
-- Strip internal or sensitive keys from API responses
-- Jest and TypeScript base configurations for consistent project setup
-- CDK Aspects for enforcing tags, security, and compliance across stacks
+- **Core Utilities**: Logging, date utilities, schema validation, metrics, and tracing
+- **Lambda HTTP Handler**: Complete wrapper with observability and error handling
+- **DNS Utilities**: Domain name generation for consistent subdomain creation
+- **DynamoDB Utilities**: Helper functions for cleaning internal keys from items
+- **Config Manager**: Type-safe environment variable handling with validation
+- **Error Classes**: Built-in error classes for consistent HTTP error responses
 
 ## Installation
 
@@ -27,201 +25,203 @@ npm install @leighton-digital/lambda-toolkit
 
 ### Importing the Package
 
-The package provides several modules that can be imported individually or together:
+All utilities are available from the main package import:
 
 ```ts
-// Import specific modules
 import {
-  generateResourceName,
-  generateS3BucketName,
-  getRemovalPolicyFromStage
-} from '@leighton-digital/lambda-toolkit/infra';
-
-import {
-  withHttpHandler,
-  createConfig,
+  // Core utilities
   logger,
-  validateSchema
-} from '@leighton-digital/lambda-toolkit/app-utils';
+  tracer,
+  metrics,
+  getISOString,
+  validateSchema,
 
-import {
-  RequiredTagsChecker,
-  addTagsToStack
-} from '@leighton-digital/lambda-toolkit/aspects';
+  // Lambda utilities
+  withHttpHandler,
 
-import {
+  // DNS utilities
+  generateApiSubDomain,
+  generateWebSubDomain,
+  generateAuthDomain,
+  generateCognitoDomain,
+  sanitiseDnsString,
+
+  // DynamoDB utilities
+  stripInternalKeys,
+
+  // Config manager
+  envVar,
+
+  // Error classes
   ValidationError,
   ResourceNotFoundError,
-  ConflictError
-} from '@leighton-digital/lambda-toolkit/errors';
-
-import {
-  Tags,
-  Stage,
-  Region
-} from '@leighton-digital/lambda-toolkit/types';
-```
-
-### Basic Example
-
-Here's a complete example showing how to use the major features together in a CDK stack:
-
-```ts
-import { App, Stack, StackProps, RemovalPolicy } from 'aws-cdk-lib';
-import { Table, AttributeType } from 'aws-cdk-lib/aws-dynamodb';
-import { Bucket } from 'aws-cdk-lib/aws-s3';
-import { Function, Runtime, Code } from 'aws-cdk-lib/aws-lambda';
-import { Aspects } from 'aws-cdk-lib';
-import {
-  // Infrastructure utilities
-  generateResourceName,
-  generateS3BucketName,
-  getRemovalPolicyFromStage,
-  getStage,
-  // Tagging utilities
-  RequiredTagsChecker,
-  addTagsToStack,
-  // Types
-  Tags,
-  Stage
+  UnauthorisedError,
+  ForbiddenError,
+  ConflictError,
+  TooManyRequestsError
 } from '@leighton-digital/lambda-toolkit';
-
-interface MyStackProps extends StackProps {
-  stage: string;
-  service: string;
-}
-
-class MyApplicationStack extends Stack {
-  constructor(scope: App, id: string, props: MyStackProps) {
-    super(scope, id, props);
-
-    const { stage, service } = props;
-    const normalizedStage = getStage(stage);
-    const removalPolicy = getRemovalPolicyFromStage(normalizedStage);
-
-    // Apply standard tags to the stack
-    const stackTags: Tags = {
-      Environment: normalizedStage,
-      Service: service,
-      Owner: 'platform-team',
-      Project: 'customer-portal',
-      ManagedBy: 'cdk',
-    };
-    addTagsToStack(this, stackTags);
-
-    // Create resources with standardized naming
-    const table = new Table(this, 'UsersTable', {
-      tableName: generateResourceName(normalizedStage, service, 'table'),
-      partitionKey: { name: 'id', type: AttributeType.STRING },
-      removalPolicy,
-    });
-
-    const bucket = new Bucket(this, 'AssetsBucket', {
-      bucketName: generateS3BucketName(normalizedStage, service, 'assets'),
-      removalPolicy,
-    });
-
-    const lambdaFunction = new Function(this, 'ApiFunction', {
-      functionName: generateResourceName(normalizedStage, service, 'function', 'api'),
-      runtime: Runtime.NODEJS_18_X,
-      handler: 'index.handler',
-      code: Code.fromAsset('lambda'),
-      environment: {
-        TABLE_NAME: table.tableName,
-        BUCKET_NAME: bucket.bucketName,
-        STAGE: normalizedStage,
-      },
-    });
-
-    // Grant permissions
-    table.grantReadWriteData(lambdaFunction);
-    bucket.grantReadWrite(lambdaFunction);
-  }
-}
-
-const app = new App();
-const stage = process.env.STAGE || 'dev';
-const service = 'customer-portal';
-
-// Create the stack
-new MyApplicationStack(app, `CustomerPortalStack-${getStage(stage)}`, {
-  stage,
-  service,
-});
-
-// Enforce required tags across all stacks
-const requiredTags = ['Environment', 'Service', 'Owner', 'Project'];
-Aspects.of(app).add(new RequiredTagsChecker(requiredTags));
-
-app.synth();
 ```
 
-#### Lambda Function Example
+### Basic HTTP Handler Example
 
-For Lambda functions, use the app-utils for consistent error handling and observability:
+Here's a complete example showing how to use the HTTP handler with validation and error handling:
 
 ```ts
-// lambda/index.ts
 import {
   withHttpHandler,
-  createConfig,
   validateSchema,
+  ValidationError,
+  ResourceNotFoundError,
   logger
-} from '@leighton-digital/lambda-toolkit/app-utils';
-import { ValidationError } from '@leighton-digital/lambda-toolkit/errors';
-
-// Configure environment-specific settings
-const config = createConfig({
-  tableName: {
-    doc: 'DynamoDB table name',
-    format: String,
-    default: '',
-    env: 'TABLE_NAME',
-  },
-  bucketName: {
-    doc: 'S3 bucket name',
-    format: String,
-    default: '',
-    env: 'BUCKET_NAME',
-  },
-});
+} from '@leighton-digital/lambda-toolkit';
+import { z } from 'zod';
 
 // Define request schema
-const requestSchema = {
-  type: 'object',
-  properties: {
-    userId: { type: 'string', minLength: 1 },
-    name: { type: 'string', minLength: 1 },
-    email: { type: 'string', format: 'email' },
-  },
-  required: ['userId', 'name', 'email'],
-  additionalProperties: false,
+const createUserSchema = z.object({
+  name: z.string().min(1).max(100),
+  email: z.string().email(),
+  age: z.number().int().min(18).max(120),
+});
+
+export const handler = withHttpHandler(async ({ event }) => {
+  const { userId } = event.pathParameters || {};
+
+  if (event.httpMethod === 'POST') {
+    // Create user
+    const body = JSON.parse(event.body || '{}');
+    const validatedUser = validateSchema(createUserSchema, body);
+
+    logger.info('Creating user', { email: validatedUser.email });
+
+    // Your business logic here...
+    const newUser = { id: 'user123', ...validatedUser };
+
+    return {
+      statusCode: 201,
+      body: { message: 'User created successfully', user: newUser },
+    };
+  }
+
+  if (event.httpMethod === 'GET' && userId) {
+    // Get user
+    logger.info('Fetching user', { userId });
+
+    // Your business logic here...
+    const user = await getUserById(userId);
+    if (!user) {
+      throw new ResourceNotFoundError(`User ${userId} not found`);
+    }
+
+    return {
+      statusCode: 200,
+      body: { user },
+    };
+  }
+
+  throw new ValidationError('Invalid request method or missing parameters');
+});
+
+async function getUserById(id: string) {
+  // Mock implementation
+  return id === 'user123' ? { id, name: 'Alice', email: 'alice@example.com' } : null;
+}
+```
+
+### Config Manager Example
+
+Use the config manager for type-safe environment variable handling:
+
+```ts
+import { envVar, withHttpHandler, logger } from '@leighton-digital/lambda-toolkit';
+
+// Validate configuration at module load time
+const config = {
+  apiUrl: envVar.getString('API_URL'),
+  enableDebug: envVar.getBoolean('ENABLE_DEBUG'),
+  maxRetries: envVar.getNumber('MAX_RETRIES'),
+  timeout: envVar.getNumber('TIMEOUT_MS'),
 };
 
-export const handler = withHttpHandler(async ({ event, metrics, stage }) => {
-  // Parse and validate request
-  const body = JSON.parse(event.body || '{}');
-  validateSchema(requestSchema, body);
-
-  // Add custom metrics
-  metrics.addMetric('UserCreated', 'Count', 1);
-
-  // Log with context
-  logger.info('Creating user', {
-    userId: body.userId,
-    stage,
-    tableName: config.get('tableName'),
+export const handler = withHttpHandler(async ({ event }) => {
+  logger.info('Handler configuration', {
+    apiUrl: config.apiUrl,
+    enableDebug: config.enableDebug,
+    maxRetries: config.maxRetries,
+    timeout: config.timeout,
   });
 
   // Your business logic here...
 
   return {
-    statusCode: 201,
-    body: {
-      message: 'User created successfully',
-      userId: body.userId,
-      stage,
-    },
+    statusCode: 200,
+    body: { message: 'Configuration loaded successfully', config },
+  };
+});
+```
+
+### DNS Utilities Example
+
+Generate consistent domain names for different environments:
+
+```ts
+import {
+  generateApiSubDomain,
+  generateWebSubDomain,
+  generateAuthDomain,
+  generateCognitoDomain
+} from '@leighton-digital/lambda-toolkit';
+
+const stage = 'develop';
+const domainName = 'example.com';
+
+// API subdomain
+const apiDomain = generateApiSubDomain({ stageName: stage, domainName });
+// Returns: 'api-develop.example.com' (or 'api.example.com' for prod)
+
+// Web subdomain
+const webDomain = generateWebSubDomain({ stageName: stage, domainName });
+// Returns: { stage: 'develop', subDomain: 'develop.example.com' }
+
+// Auth domain
+const authDomain = generateAuthDomain({ stageName: stage, domainName });
+// Returns: { stage: 'develop', authDomain: 'auth-develop.example.com' }
+
+// Cognito domain
+const cognitoDomain = generateCognitoDomain({
+  stageName: stage,
+  domainName,
+  serviceName: 'myapp'
+});
+// Returns: 'https://myapp-develop.auth.us-east-1.amazoncognito.com'
+```
+
+### DynamoDB Utilities Example
+
+Clean internal keys from DynamoDB items before returning them:
+
+```ts
+import { stripInternalKeys, withHttpHandler } from '@leighton-digital/lambda-toolkit';
+
+export const handler = withHttpHandler(async ({ event }) => {
+  // Mock DynamoDB item with internal keys
+  const dynamoItem = {
+    pk: 'USER#123',
+    sk: 'PROFILE',
+    gsi1pk: 'EMAIL#alice@example.com',
+    gsi1sk: 'USER#123',
+    name: 'Alice Johnson',
+    email: 'alice@example.com',
+    age: 30,
+    createdAt: '2025-01-01T00:00:00.000Z',
+  };
+
+  // Strip internal DynamoDB keys
+  const cleanItem = stripInternalKeys(dynamoItem);
+  // Result: { name: 'Alice Johnson', email: 'alice@example.com', age: 30, createdAt: '...' }
+
+  return {
+    statusCode: 200,
+    body: { user: cleanItem },
   };
 });
 ```
@@ -231,13 +231,53 @@ export const handler = withHttpHandler(async ({ event, metrics, stage }) => {
 To run the tests:
 
 ```bash
-npm run test
+pnpm test
 ```
-or in watch mode
+
+## Development
+
+To build the package:
 
 ```bash
-npm run test:watch
+pnpm build
 ```
+
+To run linting:
+
+```bash
+pnpm lint
+```
+
+To format code:
+
+```bash
+pnpm format
+```
+
+## Dependencies
+
+### Required
+- `@middy/core` - Lambda middleware framework
+- `@middy/http-error-handler` - HTTP error handling middleware
+- `http-errors` - HTTP error utilities
+- `zod` - Schema validation
+
+### Peer Dependencies
+- `@aws-lambda-powertools/logger` - Structured logging
+- `@aws-lambda-powertools/metrics` - Custom metrics
+- `@aws-lambda-powertools/tracer` - Distributed tracing
+- `aws-cdk-lib` - AWS CDK library (for types)
+- `aws-lambda` - AWS Lambda types
+- `constructs` - CDK constructs (for types)
+
+## Key Features
+
+- **Type Safety**: Full TypeScript support with strict typing
+- **Observability**: Built-in logging, metrics, and tracing with AWS Lambda Powertools
+- **Error Handling**: Standardized HTTP error responses with proper status codes
+- **Validation**: Comprehensive input validation with Zod schemas and helpful error messages
+- **DNS Management**: Consistent domain name generation across environments
+- **Environment Configuration**: Type-safe environment variable handling
 
 ## License
 
@@ -249,4 +289,4 @@ Contributions are welcome! Please feel free to submit a pull request.
 
 ---
 
-<img src="images/leighton-logo.svg" width="200" sanitize="true" />
+<img src="https://raw.githubusercontent.com/leighton-digital/lambda-toolkit/2578cda7dfd2a63e61912c1289d06f45f357616f/images/leighton-logo.svg" width="200" sanitize="true" />

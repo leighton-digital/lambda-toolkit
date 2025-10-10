@@ -81,7 +81,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'reference', // Must match the id exported in sidebars.ts
           position: 'left',
-          label: 'Construct Reference',
+          label: 'Documentation',
         },
         {
           href: 'https://github.com/Leighton/lambda-toolkit',
@@ -94,8 +94,8 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
-          items: [{ label: 'Construct Reference', to: '/' }],
+          title: 'Documentation',
+          items: [{ label: 'Documentation', to: '/' }],
         },
         {
           title: 'Community',
@@ -119,7 +119,7 @@ const config: Config = {
 
         // Options
         {
-          entryPoints: ['../constructs'],
+          entryPoints: ['../src/'],
           docsPath: '../docs/reference',
           tsconfig: '../tsconfig.json',
         },
