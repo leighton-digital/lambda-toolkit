@@ -1,4 +1,4 @@
-<img width="50px" height="50px" align="right" alt="Lambda Toolkit Logo" src="img/lambda-toolkit-logo.png" title="Leighton Lambda Toolkit" sanitize="true" />
+<img width="50px" height="50px" align="right" alt="Lambda Toolkit Logo" src="https://raw.githubusercontent.com/leighton-digital/lambda-toolkit/refs/heads/main/images/lambda-toolkit-logo.png" title="Leighton Lambda Toolkit" sanitize="true" />
 
 # Lambda Toolkit
 
