@@ -2,7 +2,7 @@
   "name": "@leighton-digital/lambda-toolkit",
   "version": "1.2.0",
   "license": "MIT",
-  "description": "A shared AWS CDK TypeScript utilities package that standardises resource naming, tagging, configuration, and common infrastructure patterns for consistent, compliant, and maintainable IaC",
+  "description": "Lambda Toolkit is an open-source collection of utility functions designed to help teams write production-ready application code, for deployment to AWS Lambda, faster",
   "type": "commonjs",
   "author": "leighton digital",
   "homepage": "https://github.com/leighton-digital/lambda-toolkit",
