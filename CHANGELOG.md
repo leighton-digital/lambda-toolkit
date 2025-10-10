@@ -1,3 +1,10 @@
+# 1.0.0 (2025-10-10)
+
+
+### Features
+
+* initial commit ([06d28df](https://github.com/leighton-digital/lambda-toolkit/commit/06d28dfdd8a88bc40a35a8684e0b39665b9afa80))
+
 # [1.2.0](https://github.com/leighton-digital/lambda-toolkit/compare/v1.1.0...v1.2.0) (2025-10-08)
 
 
