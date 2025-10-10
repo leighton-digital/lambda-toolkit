@@ -83,7 +83,7 @@
     "@types/aws-lambda": "^8.10.155",
     "@types/http-errors": "^2.0.5",
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.7.0",
+    "@types/node": "^24.7.1",
     "aws-cdk-lib": "^2.219.0",
     "aws-lambda": "^1.0.7",
     "commit-and-tag-version": "^12.5.2",
