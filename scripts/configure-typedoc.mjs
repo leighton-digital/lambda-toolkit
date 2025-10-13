@@ -378,7 +378,7 @@ async function fixMdxSyntax() {
           inner.includes(':') ||
           inner.includes(' ')
         ) {
-          return '`' + match + '`';
+          return `\`${match}\``;
         }
 
         // Leave simple placeholder patterns like {domainPrefix}, {region} unescaped
