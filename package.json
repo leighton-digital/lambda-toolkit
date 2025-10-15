@@ -2,7 +2,7 @@
   "name": "@leighton-digital/lambda-toolkit",
   "version": "1.1.0",
   "license": "MIT",
-  "description": "Lambda Toolkit is an open-source collection of utility functions designed to help teams write production-ready application code, for deployment to AWS Lambda, faster",
+  "description": "Lambda Toolkit is a collection of utility functions designed to help teams write production-ready application code on Lambda.",
   "type": "commonjs",
   "author": "leighton digital",
   "homepage": "https://leighton-digital.github.io/lambda-toolkit/",
