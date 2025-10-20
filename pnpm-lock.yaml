@@ -67,8 +67,8 @@ importers:
         specifier: 1.0.7
         version: 1.0.7
       commit-and-tag-version:
-        specifier: 12.5.2
-        version: 12.5.2
+        specifier: 12.6.0
+        version: 12.6.0
       commitizen:
         specifier: 4.3.1
         version: 4.3.1(@types/node@24.7.1)(typescript@5.9.3)
@@ -3124,8 +3124,8 @@ packages:
     resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
     engines: {node: '>= 12'}
 
-  commit-and-tag-version@12.5.2:
-    resolution: {integrity: sha512-ipRkoRPbDk6/d8Swc3frFCrE9p0z3X6RExUeJfbmnqypR7xPXWgwJnyQz4GGkP1grrIgTDdwXBfcBb/1DOwJ6A==}
+  commit-and-tag-version@12.6.0:
+    resolution: {integrity: sha512-/x9+InrMz4G0GzDh1/ddrCsq4SKxRPS3vO5ShhZFG9EEr0GCZ3IrQPFpnBEgnIzm1XqwbkMYpIxFml7HuVs6mQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -12206,7 +12206,7 @@ snapshots:
 
   commander@8.3.0: {}
 
-  commit-and-tag-version@12.5.2:
+  commit-and-tag-version@12.6.0:
     dependencies:
       chalk: 2.4.2
       conventional-changelog: 4.0.0
@@ -12533,7 +12533,7 @@ snapshots:
       postcss-modules-scope: 3.2.1(postcss@8.5.6)
       postcss-modules-values: 4.0.0(postcss@8.5.6)
       postcss-value-parser: 4.2.0
-      semver: 7.7.2
+      semver: 7.7.3
     optionalDependencies:
       webpack: 5.102.0(@swc/core@1.13.5)
 
@@ -15890,7 +15890,7 @@ snapshots:
       cosmiconfig: 8.3.6(typescript@5.9.3)
       jiti: 1.21.7
       postcss: 8.5.6
-      semver: 7.7.2
+      semver: 7.7.3
       webpack: 5.102.0(@swc/core@1.13.5)
     transitivePeerDependencies:
       - typescript
@@ -16713,7 +16713,7 @@ snapshots:
 
   semver-diff@4.0.0:
     dependencies:
-      semver: 7.7.2
+      semver: 7.7.3
 
   semver-diff@5.0.0:
     dependencies:
