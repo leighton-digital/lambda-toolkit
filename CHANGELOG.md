@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/leighton-digital/lambda-toolkit/compare/v1.1.0...v1.1.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* added types and errors as exports in the main index file ([03a6dd0](https://github.com/leighton-digital/lambda-toolkit/commit/03a6dd03f4309ff21b441a2a65b38de0c8b28f90))
+* added types and errors as exports in the main index file ([2d34d4e](https://github.com/leighton-digital/lambda-toolkit/commit/2d34d4e597fcb302d0b7c1618e6083e07bc3b331))
+* fixing the main deployment and docusaurus package versions ([5b876d5](https://github.com/leighton-digital/lambda-toolkit/commit/5b876d5cfa9bb6dd62fb11a861a83071b5ab991e))
+
 # [1.1.0](https://github.com/leighton-digital/lambda-toolkit/compare/v1.0.0...v1.1.0) (2025-10-10)
 
 
