@@ -59,6 +59,7 @@
     "format:fix": "biome format --write --fix .",
     "format": "biome format --write .",
     "lint": "biome check --linter-enabled=true --formatter-enabled=false .",
+    "lint:fix": "biome check --linter-enabled=true --formatter-enabled=true --write .",
     "preinstall": "npx only-allow pnpm",
     "prepack": "npm run build",
     "prepublishOnly": "npm test",
