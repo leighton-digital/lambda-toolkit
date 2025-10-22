@@ -1,3 +1,12 @@
+## [1.1.2](https://github.com/leighton-digital/lambda-toolkit/compare/v1.1.1...v1.1.2) (2025-10-22)
+
+
+### Bug Fixes
+
+* downgrade aws-lambda-powertools and middy dependencies to compatible versions ([c37f828](https://github.com/leighton-digital/lambda-toolkit/commit/c37f828b634ed96875797aa121f32b4cc9ac9351))
+* unpins peer dependencies, moves middy to peer dependency, sets powertools to same versions ([6477624](https://github.com/leighton-digital/lambda-toolkit/commit/647762471c0c5c00703fbc7ca72345a318834fe8))
+* update installation and testing instructions to use pnpm ([2fd73f1](https://github.com/leighton-digital/lambda-toolkit/commit/2fd73f1b82d233d3988b028e867dd22c0d31573f))
+
 ## [1.1.1](https://github.com/leighton-digital/lambda-toolkit/compare/v1.1.0...v1.1.1) (2025-10-21)
 
 
