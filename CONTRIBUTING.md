@@ -10,34 +10,31 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 
 1. Install Node.js (v22.15.1 recommended)
 2. Clone the repository
-3. Install dependencies: `npm install`
-4. Run tests: `npm test`
+3. Install dependencies: `pnpm install`
+4. Run tests: `pnpm test`
 
 ## Local Development
 
 To test changes to this package locally in another project:
 
 1. Build the package:
+
    ```bash
-   npm run build
+   pnpm build
    ```
 
-2. Create a symbolic link:
-   ```bash
-   npm link
+2. In your test project's `package.json`:
+
+   ```json
+   {
+     "dependencies": {
+       "@leighton-digital/lambda-toolkit": "file:../relative/path/to/local/lambda-toolkit"
+     }
+   }
    ```
 
-3. In your test project:
-   ```bash
-   npm link @leighton-digital/lambda-toolkit
-   ```
-
-4. To remove the link:
-   ```bash
-   npm unlink @leighton-digital/lambda-toolkit
-   ```
-
-> Note: Ensure your test project has the same version of Node.js and compatible dependencies.
+> [!NOTE]
+> Ensure your test project has the same version of Node.js and compatible dependencies.
 
 ## How to Contribute
 
@@ -64,7 +61,7 @@ We use Jest for testing. Please ensure:
 
 ## Pull Request Process
 
-1. Ensure all tests pass: `npm test`
+1. Ensure all tests pass: `pnpm test`
 2. Update the documentation if needed
 3. Add a clear description of your changes
 4. Reference any related issues
