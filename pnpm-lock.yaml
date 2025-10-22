@@ -16,14 +16,14 @@ importers:
         version: 4.1.12
     devDependencies:
       '@aws-lambda-powertools/logger':
-        specifier: 2.27.0
-        version: 2.27.0(@middy/core@6.4.5)
+        specifier: 2.25.1
+        version: 2.25.1(@middy/core@6.4.3)
       '@aws-lambda-powertools/metrics':
-        specifier: 2.27.0
-        version: 2.27.0(@middy/core@6.4.5)
+        specifier: 2.25.1
+        version: 2.25.1(@middy/core@6.4.3)
       '@aws-lambda-powertools/tracer':
-        specifier: 2.27.0
-        version: 2.27.0(@middy/core@6.4.5)
+        specifier: 2.25.1
+        version: 2.25.1(@middy/core@6.4.3)
       '@biomejs/biome':
         specifier: 2.2.6
         version: 2.2.6
@@ -34,11 +34,11 @@ importers:
         specifier: 20.0.0
         version: 20.0.0
       '@middy/core':
-        specifier: 6.4.5
-        version: 6.4.5
+        specifier: 6.4.3
+        version: 6.4.3
       '@middy/http-error-handler':
-        specifier: 6.4.5
-        version: 6.4.5
+        specifier: 6.4.3
+        version: 6.4.3
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@25.0.1(typescript@5.9.3))
@@ -61,8 +61,8 @@ importers:
         specifier: 24.7.1
         version: 24.7.1
       aws-cdk-lib:
-        specifier: 2.219.0
-        version: 2.219.0(constructs@10.4.2)
+        specifier: 2.196.1
+        version: 2.196.1(constructs@10.4.2)
       commit-and-tag-version:
         specifier: 12.6.0
         version: 12.6.0
@@ -250,26 +250,26 @@ packages:
   '@asamuzakjp/css-color@3.2.0':
     resolution: {integrity: sha512-K1A6z8tS3XsmCMM86xoWdn7Fkdn9m6RSVtocUrJYIwZnFVkng/PvkEoWtOWmP+Scc6saYWHWZYbndEEXxl24jw==}
 
-  '@aws-cdk/asset-awscli-v1@2.2.242':
-    resolution: {integrity: sha512-4c1bAy2ISzcdKXYS1k4HYZsNrgiwbiDzj36ybwFVxEWZXVAP0dimQTCaB9fxu7sWzEjw3d+eaw6Fon+QTfTIpQ==}
+  '@aws-cdk/asset-awscli-v1@2.2.236':
+    resolution: {integrity: sha512-BjqQVGYsVuS4VXdrezDapSd6P7soEdWJoXl1S8X7l0uLtVX9WvpmCylZKOJDrJblK5MNe1Vq9wUI91LBzzOi8A==}
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0':
     resolution: {integrity: sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==}
 
-  '@aws-cdk/cloud-assembly-schema@48.15.0':
-    resolution: {integrity: sha512-hHs3Z5Nh0tUxHjk6myEv5mHqLuHnDcZlM19c01g1W75O24oBOiZjssRGIz/T0QOpxcY0Zu6mFrFCdwDWbZrc6A==}
-    engines: {node: '>= 18.0.0'}
+  '@aws-cdk/cloud-assembly-schema@41.2.0':
+    resolution: {integrity: sha512-JaulVS6z9y5+u4jNmoWbHZRs9uGOnmn/ktXygNWKNu1k6lF3ad4so3s18eRu15XCbUIomxN9WPYT6Ehh7hzONw==}
+    engines: {node: '>= 14.15.0'}
     bundledDependencies:
       - jsonschema
       - semver
 
-  '@aws-lambda-powertools/commons@2.27.0':
-    resolution: {integrity: sha512-LjrMrSNcAOUw5g9frev4J0NEs3B7AU0uemB0BXbNLAHrYUdP2ls+ncohwNYVVN+DwjfpYj+FYjdRhUlmWzs8Cw==}
+  '@aws-lambda-powertools/commons@2.25.1':
+    resolution: {integrity: sha512-3m4+9x6VVx4IBI8xfCcCtAj+sDmNyT0+Tr39YNEX3pQVSPbZW1PD3fZW0JlaT09TJRjUznRsUCwH4Iyu5wEeMg==}
 
-  '@aws-lambda-powertools/logger@2.27.0':
-    resolution: {integrity: sha512-q3W5GAxMs5usQE65mLY3sE6HCebnZxQhZoj0JjvmQRfzUOTfBKhCeKUA+M+G7i+JzhsgWzD0jovVY2d3+DrZbQ==}
+  '@aws-lambda-powertools/logger@2.25.1':
+    resolution: {integrity: sha512-gCcLK+qEgdTDUk3Sc/Y9gYSFow7ZqNq/6WHMRXL0GdzNX1deM9JqtDA2wOBp6RbfbhqxOnqau1MIBbxqntNMGQ==}
     peerDependencies:
-      '@aws-lambda-powertools/jmespath': 2.27.0
+      '@aws-lambda-powertools/jmespath': 2.25.1
       '@middy/core': 4.x || 5.x || 6.x
     peerDependenciesMeta:
       '@aws-lambda-powertools/jmespath':
@@ -277,16 +277,16 @@ packages:
       '@middy/core':
         optional: true
 
-  '@aws-lambda-powertools/metrics@2.27.0':
-    resolution: {integrity: sha512-4+KHXybecCzYfHOnDWssaR3NVnUg+yVcBxAEQ3K0egHFkrvZFXf4vAbCOM0Fml5+pNYAlf+ek0adkRgPTnXjHA==}
+  '@aws-lambda-powertools/metrics@2.25.1':
+    resolution: {integrity: sha512-jWnB32W42QthhovvU15wbQNGh8fV8i0GzsK/t75HQ+h6qs1XTus635VWap5aMN26Us0GVqIeYKKfytZWyLk6eg==}
     peerDependencies:
       '@middy/core': 4.x || 5.x || 6.x
     peerDependenciesMeta:
       '@middy/core':
         optional: true
 
-  '@aws-lambda-powertools/tracer@2.27.0':
-    resolution: {integrity: sha512-SZ4ON8WQRoIAQy2m8aoFr7XJBvbTEFydjeKvbf+QZo97U3S9FBqq/RsOeSr4TuFzoMLVMHPI3nZCAaLzmhCwJg==}
+  '@aws-lambda-powertools/tracer@2.25.1':
+    resolution: {integrity: sha512-rYT7S3W1G7z4epCwPNy3yxkJZKi1fMxvfq7QmTEqT5q7H1ob3jRzULCycrUoVtMwF5x+Vs1ZsoViuRVZDXpgkg==}
     peerDependencies:
       '@middy/core': 4.x || 5.x || 6.x
     peerDependenciesMeta:
@@ -1749,16 +1749,16 @@ packages:
       '@types/react': '>=16'
       react: '>=16'
 
-  '@middy/core@6.4.5':
-    resolution: {integrity: sha512-qRGCslDHjMr08fywcfVbWR9qpx16vGD481i9GpX3r5efi8Arjp/44JTjfeJkJJxvIb/8/+E9MLvU86+3oe1oJQ==}
+  '@middy/core@6.4.3':
+    resolution: {integrity: sha512-bVb6fwG4FhmJFbxJPumr/y7/ujy7b3NpL6d1ld4uuxUy7/FO8l5tvTdsEk4cDqsrnWFq6M6bmAvfFBPgAALi1A==}
     engines: {node: '>=20'}
 
-  '@middy/http-error-handler@6.4.5':
-    resolution: {integrity: sha512-0El5exXIl5QW47kQQTx1lVk0dZC961hGK6TVd+jtQAv9tpN6ibZQaRI7CaL8b+bmAgsdsxZQmEqoLOBhhW5gQQ==}
+  '@middy/http-error-handler@6.4.3':
+    resolution: {integrity: sha512-YgOL705H4Vl+Y0hAjPkIBfPecdVrZliJKKQoyo/kMvzkL51ZZrs7aozrjDsTZyn65YnAUVgPgphu5m7TL14XZA==}
     engines: {node: '>=20'}
 
-  '@middy/util@6.4.5':
-    resolution: {integrity: sha512-170ml5Q8QIHjric+ynwmDoa1sbcaMkUJumpUNxubqzStN7rEebVHnzXLQBwvSAhp7Fhcja7q2JLo0yjHpyPO4Q==}
+  '@middy/util@6.4.3':
+    resolution: {integrity: sha512-/FDYl5gWkF5jVZ1b41YWBpBS/AsT4c+ic1rPVZN1kSjoYGPPiZPW6GdPmVThKftWVvwC3m1dGt7Q2rXmvtwTxg==}
     engines: {node: '>=20'}
 
   '@napi-rs/wasm-runtime@0.2.12':
@@ -2669,9 +2669,9 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
 
-  aws-cdk-lib@2.219.0:
-    resolution: {integrity: sha512-Rq1/f3exfFEWee1znNq8yvR1TuRQ4xQZz3JNkliBW9dFwyrDe7l/dmlAf6DVvB3nuiZAaUS+vh4ua1LZ7Ec8kg==}
-    engines: {node: '>= 18.0.0'}
+  aws-cdk-lib@2.196.1:
+    resolution: {integrity: sha512-OsJ0luDUnagbJpd5Uweh+/6L7OLZQZB7EV9pD9i23uJF6uoe4M02T+kg67huxZdVJVJTZK6De4QxazlB2/mO6A==}
+    engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
     bundledDependencies:
@@ -7932,33 +7932,33 @@ snapshots:
       '@csstools/css-tokenizer': 3.0.4
       lru-cache: 10.4.3
 
-  '@aws-cdk/asset-awscli-v1@2.2.242': {}
+  '@aws-cdk/asset-awscli-v1@2.2.236': {}
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0': {}
 
-  '@aws-cdk/cloud-assembly-schema@48.15.0': {}
+  '@aws-cdk/cloud-assembly-schema@41.2.0': {}
 
-  '@aws-lambda-powertools/commons@2.27.0': {}
+  '@aws-lambda-powertools/commons@2.25.1': {}
 
-  '@aws-lambda-powertools/logger@2.27.0(@middy/core@6.4.5)':
+  '@aws-lambda-powertools/logger@2.25.1(@middy/core@6.4.3)':
     dependencies:
-      '@aws-lambda-powertools/commons': 2.27.0
+      '@aws-lambda-powertools/commons': 2.25.1
       lodash.merge: 4.6.2
     optionalDependencies:
-      '@middy/core': 6.4.5
+      '@middy/core': 6.4.3
 
-  '@aws-lambda-powertools/metrics@2.27.0(@middy/core@6.4.5)':
+  '@aws-lambda-powertools/metrics@2.25.1(@middy/core@6.4.3)':
     dependencies:
-      '@aws-lambda-powertools/commons': 2.27.0
+      '@aws-lambda-powertools/commons': 2.25.1
     optionalDependencies:
-      '@middy/core': 6.4.5
+      '@middy/core': 6.4.3
 
-  '@aws-lambda-powertools/tracer@2.27.0(@middy/core@6.4.5)':
+  '@aws-lambda-powertools/tracer@2.25.1(@middy/core@6.4.3)':
     dependencies:
-      '@aws-lambda-powertools/commons': 2.27.0
+      '@aws-lambda-powertools/commons': 2.25.1
       aws-xray-sdk-core: 3.11.0
     optionalDependencies:
-      '@middy/core': 6.4.5
+      '@middy/core': 6.4.3
 
   '@aws-sdk/types@3.914.0':
     dependencies:
@@ -10356,13 +10356,13 @@ snapshots:
       '@types/react': 19.2.2
       react: 19.2.0
 
-  '@middy/core@6.4.5': {}
+  '@middy/core@6.4.3': {}
 
-  '@middy/http-error-handler@6.4.5':
+  '@middy/http-error-handler@6.4.3':
     dependencies:
-      '@middy/util': 6.4.5
+      '@middy/util': 6.4.3
 
-  '@middy/util@6.4.5': {}
+  '@middy/util@6.4.3': {}
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
@@ -11342,11 +11342,11 @@ snapshots:
       postcss: 8.5.6
       postcss-value-parser: 4.2.0
 
-  aws-cdk-lib@2.219.0(constructs@10.4.2):
+  aws-cdk-lib@2.196.1(constructs@10.4.2):
     dependencies:
-      '@aws-cdk/asset-awscli-v1': 2.2.242
+      '@aws-cdk/asset-awscli-v1': 2.2.236
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
-      '@aws-cdk/cloud-assembly-schema': 48.15.0
+      '@aws-cdk/cloud-assembly-schema': 41.2.0
       constructs: 10.4.2
 
   aws-xray-sdk-core@3.11.0:
