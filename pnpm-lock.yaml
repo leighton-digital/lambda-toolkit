@@ -22,8 +22,8 @@ importers:
         specifier: 2.25.1
         version: 2.25.1(@middy/core@6.4.3)
       '@aws-lambda-powertools/tracer':
-        specifier: 2.25.1
-        version: 2.25.1(@middy/core@6.4.3)
+        specifier: 2.28.1
+        version: 2.28.1(@middy/core@6.4.3)
       '@biomejs/biome':
         specifier: 2.3.1
         version: 2.3.1
@@ -288,8 +288,8 @@ packages:
       '@middy/core':
         optional: true
 
-  '@aws-lambda-powertools/tracer@2.25.1':
-    resolution: {integrity: sha512-rYT7S3W1G7z4epCwPNy3yxkJZKi1fMxvfq7QmTEqT5q7H1ob3jRzULCycrUoVtMwF5x+Vs1ZsoViuRVZDXpgkg==}
+  '@aws-lambda-powertools/tracer@2.28.1':
+    resolution: {integrity: sha512-6Fy3TrU+X7Zjl1hs3EvHRPy5Rv4PTOiKYdlaqvo/1FWYlqKnUVaQEfS/ejJnOYOXL16xMMC6y40j7wOTPiTEjw==}
     peerDependencies:
       '@middy/core': 4.x || 5.x || 6.x
     peerDependenciesMeta:
@@ -7958,9 +7958,9 @@ snapshots:
     optionalDependencies:
       '@middy/core': 6.4.3
 
-  '@aws-lambda-powertools/tracer@2.25.1(@middy/core@6.4.3)':
+  '@aws-lambda-powertools/tracer@2.28.1(@middy/core@6.4.3)':
     dependencies:
-      '@aws-lambda-powertools/commons': 2.25.1
+      '@aws-lambda-powertools/commons': 2.28.1
       aws-xray-sdk-core: 3.11.0
     optionalDependencies:
       '@middy/core': 6.4.3
@@ -10987,7 +10987,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 24.7.1
+      '@types/node': 17.0.45
 
   '@types/send@0.17.5':
     dependencies:
