@@ -20,11 +20,13 @@
   "bugs": {
     "url": "https://github.com/leighton-digital/lambda-toolkit/issues"
   },
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
     }
   },
   "files": [
