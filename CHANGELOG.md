@@ -1,3 +1,11 @@
+## [1.1.3](https://github.com/leighton-digital/lambda-toolkit/compare/v1.1.2...v1.1.3) (2025-10-29)
+
+
+### Bug Fixes
+
+* adds esm export ([cdeae87](https://github.com/leighton-digital/lambda-toolkit/commit/cdeae876d26bb1d5542d24cddd7a4065277c698b))
+* update main and types paths in package.json ([6108b51](https://github.com/leighton-digital/lambda-toolkit/commit/6108b51d0becdf3372213ce84227855bf297f4bb))
+
 ## [1.1.2](https://github.com/leighton-digital/lambda-toolkit/compare/v1.1.1...v1.1.2) (2025-10-22)
 
 
