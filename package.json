@@ -88,7 +88,7 @@
     "@types/aws-lambda": "8.10.157",
     "@types/http-errors": "2.0.5",
     "@types/jest": "30.0.0",
-    "@types/node": "24.7.1",
+    "@types/node": "24.10.0",
     "aws-cdk-lib": "2.221.0",
     "commit-and-tag-version": "12.6.0",
     "commitizen": "4.3.1",
