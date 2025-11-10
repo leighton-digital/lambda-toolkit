@@ -62,7 +62,7 @@ importers:
         version: 24.10.0
       aws-cdk-lib:
         specifier: 2.222.0
-        version: 2.222.0(constructs@10.4.2)
+        version: 2.222.0(constructs@10.4.3)
       commit-and-tag-version:
         specifier: 12.6.0
         version: 12.6.0
@@ -70,8 +70,8 @@ importers:
         specifier: 4.3.1
         version: 4.3.1(@types/node@24.10.0)(typescript@5.9.3)
       constructs:
-        specifier: 10.4.2
-        version: 10.4.2
+        specifier: 10.4.3
+        version: 10.4.3
       cz-conventional-changelog:
         specifier: 3.3.0
         version: 3.3.0(@types/node@24.10.0)(typescript@5.9.3)
@@ -3109,8 +3109,8 @@ packages:
     resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  constructs@10.4.2:
-    resolution: {integrity: sha512-wsNxBlAott2qg8Zv87q3eYZYgheb9lchtBfjHzzLHtXbttwSrHPs1NNQbBrmbb1YZvYg2+Vh0Dor76w4mFxJkA==}
+  constructs@10.4.3:
+    resolution: {integrity: sha512-3+ZB67qWGM1vEstNpj6pGaLNN1qz4gxC1CBhEUhZDZk0PqzQWY65IzC1Doq17MGPa9xa2wJ1G/DJ3swU8kWAHQ==}
 
   content-disposition@0.5.2:
     resolution: {integrity: sha512-kRGRZw3bLlFISDBgwTSA1TMBFN6J6GWDeubmDE3AF+3+yXL8hTWv8r5rkLbqYXY4RjPk/EzHnClI3zQf1cFmHA==}
@@ -11362,12 +11362,12 @@ snapshots:
       postcss: 8.5.6
       postcss-value-parser: 4.2.0
 
-  aws-cdk-lib@2.222.0(constructs@10.4.2):
+  aws-cdk-lib@2.222.0(constructs@10.4.3):
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.242
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
       '@aws-cdk/cloud-assembly-schema': 48.18.0
-      constructs: 10.4.2
+      constructs: 10.4.3
 
   aws-xray-sdk-core@3.11.0:
     dependencies:
@@ -11903,7 +11903,7 @@ snapshots:
 
   consola@3.4.2: {}
 
-  constructs@10.4.2: {}
+  constructs@10.4.3: {}
 
   content-disposition@0.5.2: {}
 
