@@ -113,6 +113,6 @@
   },
   "dependencies": {
     "http-errors": "2.0.0",
-    "zod": "4.1.12"
+    "zod": "4.1.13"
   }
 }
