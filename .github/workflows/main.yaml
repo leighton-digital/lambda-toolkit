@@ -13,6 +13,7 @@ permissions:
 jobs:
 
   quality-checks:
+    secrets: inherit
     uses: ./.github/workflows/_quality-checks.yaml
 
   build:
