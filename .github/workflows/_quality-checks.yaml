@@ -24,9 +24,13 @@ jobs:
       run: pnpm test
       timeout-minutes: 15
 
-  security:
-    uses: ./.github/workflows/_node_job.yaml
+security:
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ github.token }}
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
