@@ -25,6 +25,7 @@ jobs:
       timeout-minutes: 15
 
   security:
+    name: 🔒  Security Checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -36,3 +37,5 @@ jobs:
         uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --all-projects
