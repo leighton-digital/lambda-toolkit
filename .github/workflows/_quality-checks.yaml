@@ -24,7 +24,7 @@ jobs:
       run: pnpm test
       timeout-minutes: 15
 
-security:
+  security:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
