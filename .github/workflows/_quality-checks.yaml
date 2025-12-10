@@ -36,7 +36,7 @@ jobs:
       - uses: snyk/actions/setup@master
 
       - name: Snyk Test
-        run: snyk test --report
+        run: snyk test --report --all-projects
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         working-directory: ${{ env.WORKING_DIR }}
