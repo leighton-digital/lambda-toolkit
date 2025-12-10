@@ -33,9 +33,22 @@ jobs:
           fetch-depth: 0
           token: ${{ github.token }}
       - uses: ./.github/actions/setup-node-pnpm
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
+      - uses: snyk/actions/setup@master
+
+      - name: Snyk Test
+        run: snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --all-projects --report
+        working-directory: ${{ env.WORKING_DIR }}
+
+      - name: Snyk Code Test
+        run: snyk code test --report --project-name="lambda-toolkit" --severity-threshold=medium
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      # - name: Run Snyk to check for vulnerabilities
+      #   uses: snyk/actions/node@master
+      #   env:
+      #     SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      #   with:
+      #     args: --all-projects --report
+
