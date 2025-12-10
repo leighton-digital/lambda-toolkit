@@ -36,7 +36,7 @@ jobs:
       - uses: snyk/actions/setup@master
 
       - name: Snyk Test
-        run: snyk test --all-projects --report --project-name="lambda-toolkit"
+        run: snyk test --report
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         working-directory: ${{ env.WORKING_DIR }}
