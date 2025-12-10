@@ -34,14 +34,12 @@ jobs:
           token: ${{ github.token }}
       - uses: ./.github/actions/setup-node-pnpm
       - uses: snyk/actions/setup@master
-
+      - name: Snyk Code Test
+        run: snyk code test --all-projects --report
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Snyk Test
         run: snyk test --report --all-projects
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         working-directory: ${{ env.WORKING_DIR }}
-
-      - name: Snyk Code Test
-        run: snyk code test --all-projects --report --project-name="lambda-toolkit" --severity-threshold=medium
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
