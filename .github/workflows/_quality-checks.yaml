@@ -30,4 +30,4 @@ jobs:
     uses: ./.github/workflows/_node_job.yaml
     with:
       name: 📦  Unused Dependencies Check
-      run: pnpm dlx knip
+      run: pnpm dlx knip --include dependencies
