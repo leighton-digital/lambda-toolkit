@@ -23,13 +23,13 @@ importers:
     devDependencies:
       '@aws-lambda-powertools/logger':
         specifier: 2.29.0
-        version: 2.29.0(@middy/core@6.4.3)
+        version: 2.29.0(@middy/core@6.4.5)
       '@aws-lambda-powertools/metrics':
         specifier: 2.29.0
-        version: 2.29.0(@middy/core@6.4.3)
+        version: 2.29.0(@middy/core@6.4.5)
       '@aws-lambda-powertools/tracer':
         specifier: 2.29.0
-        version: 2.29.0(@middy/core@6.4.3)
+        version: 2.29.0(@middy/core@6.4.5)
       '@biomejs/biome':
         specifier: 2.3.8
         version: 2.3.8
@@ -40,8 +40,8 @@ importers:
         specifier: 20.2.0
         version: 20.2.0
       '@middy/core':
-        specifier: 6.4.3
-        version: 6.4.3
+        specifier: 6.4.5
+        version: 6.4.5
       '@middy/http-error-handler':
         specifier: 6.4.5
         version: 6.4.5
@@ -1720,8 +1720,8 @@ packages:
       '@types/react': '>=16'
       react: '>=16'
 
-  '@middy/core@6.4.3':
-    resolution: {integrity: sha512-bVb6fwG4FhmJFbxJPumr/y7/ujy7b3NpL6d1ld4uuxUy7/FO8l5tvTdsEk4cDqsrnWFq6M6bmAvfFBPgAALi1A==}
+  '@middy/core@6.4.5':
+    resolution: {integrity: sha512-qRGCslDHjMr08fywcfVbWR9qpx16vGD481i9GpX3r5efi8Arjp/44JTjfeJkJJxvIb/8/+E9MLvU86+3oe1oJQ==}
     engines: {node: '>=20'}
 
   '@middy/http-error-handler@6.4.5':
@@ -2009,8 +2009,8 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
 
-  '@tsconfig/node10@1.0.11':
-    resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
+  '@tsconfig/node10@1.0.12':
+    resolution: {integrity: sha512-UCYBaeFvM11aU2y3YPZ//O5Rhj+xKyzy7mvcIoAjASbigy8mHMryP5cK7dgjlz2hWxh1g5pLw084E0a/wlUSFQ==}
 
   '@tsconfig/node12@1.0.11':
     resolution: {integrity: sha512-cqefuRsh12pWyGsIoBKJA9luFu3mRxCA+ORZvA4ktLSzIuCUtWVxGIuXigEwO5/ywWFMZ2QEGKWvkZG1zDMTag==}
@@ -6800,26 +6800,26 @@ snapshots:
     dependencies:
       '@aws/lambda-invoke-store': 0.2.1
 
-  '@aws-lambda-powertools/logger@2.29.0(@middy/core@6.4.3)':
+  '@aws-lambda-powertools/logger@2.29.0(@middy/core@6.4.5)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.29.0
       '@aws/lambda-invoke-store': 0.2.1
       lodash.merge: 4.6.2
     optionalDependencies:
-      '@middy/core': 6.4.3
+      '@middy/core': 6.4.5
 
-  '@aws-lambda-powertools/metrics@2.29.0(@middy/core@6.4.3)':
+  '@aws-lambda-powertools/metrics@2.29.0(@middy/core@6.4.5)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.29.0
     optionalDependencies:
-      '@middy/core': 6.4.3
+      '@middy/core': 6.4.5
 
-  '@aws-lambda-powertools/tracer@2.29.0(@middy/core@6.4.3)':
+  '@aws-lambda-powertools/tracer@2.29.0(@middy/core@6.4.5)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.29.0
       aws-xray-sdk-core: 3.12.0
     optionalDependencies:
-      '@middy/core': 6.4.3
+      '@middy/core': 6.4.5
 
   '@aws-sdk/types@3.936.0':
     dependencies:
@@ -9248,7 +9248,7 @@ snapshots:
       '@types/react': 19.2.2
       react: 19.2.1
 
-  '@middy/core@6.4.3': {}
+  '@middy/core@6.4.5': {}
 
   '@middy/http-error-handler@6.4.5':
     dependencies:
@@ -9528,7 +9528,7 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
-  '@tsconfig/node10@1.0.11':
+  '@tsconfig/node10@1.0.12':
     optional: true
 
   '@tsconfig/node12@1.0.11':
@@ -14520,7 +14520,7 @@ snapshots:
   ts-node@10.9.2(@swc/core@1.13.5)(@types/node@24.10.1)(typescript@5.9.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
-      '@tsconfig/node10': 1.0.11
+      '@tsconfig/node10': 1.0.12
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
