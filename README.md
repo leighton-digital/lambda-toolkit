@@ -290,5 +290,3 @@ Contributions are welcome! Please feel free to submit a pull request.
 ---
 
 <img src="https://raw.githubusercontent.com/leighton-digital/lambda-toolkit/2578cda7dfd2a63e61912c1289d06f45f357616f/images/leighton-logo.svg" width="200" sanitize="true" />
-
-TESTING_SECRET_TOKEN=abc123
