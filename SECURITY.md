@@ -5,7 +5,7 @@ We generally support the latest minor release of the project. Security fixes wil
 
 ## Reporting a Vulnerability
 Please **do not** create a public issue for security vulnerabilities.
-Instead, email the maintainers at **security@leighton.com** or use GitHub's private security advisories.
+Instead, click on the **"Report a vulnerability"** button on the top right of https://github.com/leighton-digital/lambda-toolkit/security.
 We'll acknowledge receipt within 2 business days and provide a timeline for a fix once triaged.
 
 ## Disclosure
