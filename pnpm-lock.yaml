@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@types/aws-lambda':
+        specifier: 8.10.159
+        version: 8.10.159
+      '@types/http-errors':
+        specifier: 2.0.5
+        version: 2.0.5
       aws-cdk-lib:
         specifier: ^2.196.1
         version: 2.232.1(constructs@10.4.3)
@@ -48,12 +54,6 @@ importers:
       '@swc/jest':
         specifier: 0.2.39
         version: 0.2.39(@swc/core@1.13.5)
-      '@types/aws-lambda':
-        specifier: 8.10.159
-        version: 8.10.159
-      '@types/http-errors':
-        specifier: 2.0.5
-        version: 2.0.5
       '@types/jest':
         specifier: 30.0.0
         version: 30.0.0
