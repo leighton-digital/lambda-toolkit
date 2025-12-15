@@ -1,0 +1,8 @@
+{
+  "workspaces": {
+    ".": {}
+  },
+  "semantic-release": {
+    "config": [".releaserc.json"]
+  }
+}
