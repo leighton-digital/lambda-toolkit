@@ -82,6 +82,7 @@
     "@commitlint/config-conventional": "20.2.0",
     "@middy/core": "6.4.5",
     "@middy/http-error-handler": "6.4.5",
+    "@semantic-release/changelog": "6.0.3",
     "@swc/jest": "0.2.39",
     "@types/aws-lambda": "8.10.159",
     "@types/http-errors": "2.0.5",
