@@ -84,7 +84,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://github.com/Leighton/lambda-toolkit',
+          href: 'https://github.com/leighton-digital/lambda-toolkit',
           label: 'GitHub',
           position: 'right',
         },
@@ -102,7 +102,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Issues',
-              href: 'https://github.com/Leighton/lambda-toolkit/issues',
+              href: 'https://github.com/leighton-digital/lambda-toolkit/issues',
             },
           ],
         },
