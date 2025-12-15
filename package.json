@@ -83,9 +83,8 @@
     "@middy/core": "6.4.5",
     "@middy/http-error-handler": "6.4.5",
     "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/git": "10.0.1",
     "@swc/jest": "0.2.39",
-    "@types/aws-lambda": "8.10.159",
-    "@types/http-errors": "2.0.5",
     "@types/jest": "30.0.0",
     "@types/node": "24.10.1",
     "commitizen": "4.3.1",
@@ -108,5 +107,9 @@
     "constructs": "^10.4.2",
     "http-errors": "^2.0.0",
     "zod": "^4.1.12"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "8.10.159",
+    "@types/http-errors": "2.0.5"
   }
 }
