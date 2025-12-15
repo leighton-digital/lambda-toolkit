@@ -1,6 +1,6 @@
 {
   "name": "@leighton-digital/lambda-toolkit",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "description": "Lambda Toolkit is a collection of utility functions designed to help teams write production-ready application code on Lambda.",
   "type": "commonjs",
