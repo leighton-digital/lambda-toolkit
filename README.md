@@ -256,19 +256,17 @@ pnpm format
 
 ## Dependencies
 
-### Required
-- `@middy/core` - Lambda middleware framework
-- `@middy/http-error-handler` - HTTP error handling middleware
-- `http-errors` - HTTP error utilities
-- `zod` - Schema validation
-
 ### Peer Dependencies
+
 - `@aws-lambda-powertools/logger` - Structured logging
 - `@aws-lambda-powertools/metrics` - Custom metrics
 - `@aws-lambda-powertools/tracer` - Distributed tracing
+- `@middy/core` - AWS Lambda middleware engine
+- `@middy/http-error-handler` - Middleware for handling HTTP errors gracefully
 - `aws-cdk-lib` - AWS CDK library (for types)
-- `aws-lambda` - AWS Lambda types
-- `constructs` - CDK constructs (for types)
+- `constructs` - Core CDK construct classes and interfaces
+- `http-errors` - Standardized HTTP error objects
+- `zod` - Runtime schema validation and type inference
 
 ## Key Features
 
