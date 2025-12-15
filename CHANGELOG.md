@@ -1,3 +1,23 @@
+# [1.2.0](https://github.com/leighton-digital/lambda-toolkit/compare/v1.1.3...v1.2.0) (2025-12-15)
+
+
+### Bug Fixes
+
+* add missing dependency for semantic-release ([69109ef](https://github.com/leighton-digital/lambda-toolkit/commit/69109ef784b2a1a4f936b9f32c0d80cd4656bd79))
+* move @types/aws-lambda and @types/http-errors to dependencies ([13c93fe](https://github.com/leighton-digital/lambda-toolkit/commit/13c93fe072c2184af8285411e27b589f2ce90c77))
+* update @types/aws-lambda to peer dependency version 8.10.159 ([104af7e](https://github.com/leighton-digital/lambda-toolkit/commit/104af7ec13edf97afaa3710175701644ca053491))
+* update dependencies and improve documentation in README and index files ([9ac856c](https://github.com/leighton-digital/lambda-toolkit/commit/9ac856cef10e6fb119d7c77303111ec5b00701c6))
+* update zod and aws-lambda types to peer dependencies ([5c1be6c](https://github.com/leighton-digital/lambda-toolkit/commit/5c1be6cec6bf9338d4f899a392582938c5ea81c3))
+
+
+### Features
+
+* add knip to find unused dependencies ([0f93112](https://github.com/leighton-digital/lambda-toolkit/commit/0f931124a31389e061a4cd14fd3067c3b6401636))
+* change ./SECURITY.md to remove email address ([9810542](https://github.com/leighton-digital/lambda-toolkit/commit/981054201735689bf2a7c78800b1ddbd80bdbb79))
+* ensure knip only checks for unused dependencies ([fd2d56a](https://github.com/leighton-digital/lambda-toolkit/commit/fd2d56acf9b752e2de87119330cc71e94dbb83f0))
+* improve workflow efficiency ([94f75f1](https://github.com/leighton-digital/lambda-toolkit/commit/94f75f10f485a6548f61450d1a48b6ca08872a98))
+* update dependabot configuration ([ddc8303](https://github.com/leighton-digital/lambda-toolkit/commit/ddc8303dfdbbb71e10ace1febca327b53f8f72ce))
+
 ## [1.1.3](https://github.com/leighton-digital/lambda-toolkit/compare/v1.1.2...v1.1.3) (2025-10-29)
 
 
