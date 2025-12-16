@@ -89,13 +89,13 @@
     "@types/node": "24.10.1",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "3.3.0",
-    "http-errors": "2.0.0",
+    "http-errors": "2.0.1",
     "jest": "30.2.0",
     "lefthook": "2.0.4",
     "typedoc": "0.28.15",
     "typedoc-plugin-markdown": "4.9.0",
     "typescript": "5.9.3",
-    "zod": "4.1.12"
+    "zod": "4.1.13"
   },
   "peerDependencies": {
     "@aws-lambda-powertools/logger": "^2.25.1",
