@@ -1,3 +1,18 @@
+# [1.3.0](https://github.com/leighton-digital/lambda-toolkit/compare/v1.2.2...v1.3.0) (2026-02-16)
+
+
+### Bug Fixes
+
+* add ignore dep for commit analyzer in knip config ([c87d271](https://github.com/leighton-digital/lambda-toolkit/commit/c87d2716dde7fb4ecf73c1b8c1f93c31e7c4ebe8))
+* add missing dependency ([af878cf](https://github.com/leighton-digital/lambda-toolkit/commit/af878cf02ae625be039031b919e7e7fc928f9f3a))
+* add missing dependency conventional-changelog-conventionalcommits ([d595f76](https://github.com/leighton-digital/lambda-toolkit/commit/d595f76b621cf9010991d1babaf98cf4d4d81071))
+
+
+### Features
+
+* make dependabot commit with bumpable commit messages ([13f02d5](https://github.com/leighton-digital/lambda-toolkit/commit/13f02d5118d6c9768a2de874d8938949014ed943))
+* undo changes to dependabot yml ([5579959](https://github.com/leighton-digital/lambda-toolkit/commit/5579959228205c6bd7d61ef368cb823105fc2697))
+
 # [1.2.0](https://github.com/leighton-digital/lambda-toolkit/compare/v1.1.3...v1.2.0) (2025-12-15)
 
 
