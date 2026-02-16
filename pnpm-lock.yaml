@@ -43,8 +43,8 @@ importers:
         specifier: 7.0.2
         version: 7.0.2
       '@middy/http-error-handler':
-        specifier: 6.4.5
-        version: 6.4.5
+        specifier: 7.0.2
+        version: 7.0.2
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@25.0.2(typescript@5.9.3))
@@ -1762,13 +1762,13 @@ packages:
       '@aws/durable-execution-sdk-js':
         optional: true
 
-  '@middy/http-error-handler@6.4.5':
-    resolution: {integrity: sha512-0El5exXIl5QW47kQQTx1lVk0dZC961hGK6TVd+jtQAv9tpN6ibZQaRI7CaL8b+bmAgsdsxZQmEqoLOBhhW5gQQ==}
-    engines: {node: '>=20'}
+  '@middy/http-error-handler@7.0.2':
+    resolution: {integrity: sha512-uEd6ctFWjgOGUUSSYdEOYst6bfSg2P6Kb/fRr23f1ys1ssA6qR8/ttKH8PzZCe+hpuFhz+XGhOS/2sHzSSBEFQ==}
+    engines: {node: '>=22'}
 
-  '@middy/util@6.4.5':
-    resolution: {integrity: sha512-170ml5Q8QIHjric+ynwmDoa1sbcaMkUJumpUNxubqzStN7rEebVHnzXLQBwvSAhp7Fhcja7q2JLo0yjHpyPO4Q==}
-    engines: {node: '>=20'}
+  '@middy/util@7.0.2':
+    resolution: {integrity: sha512-81pP1Am7QarL6e2+SHYnDu83jxqgxM3sztHJNLDZ2B+YwzT+smGjMaDX10bFH8PvTDr/nic3QaNOe2X8UoCaBw==}
+    engines: {node: '>=22'}
 
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
@@ -10053,11 +10053,11 @@ snapshots:
 
   '@middy/core@7.0.2': {}
 
-  '@middy/http-error-handler@6.4.5':
+  '@middy/http-error-handler@7.0.2':
     dependencies:
-      '@middy/util': 6.4.5
+      '@middy/util': 7.0.2
 
-  '@middy/util@6.4.5': {}
+  '@middy/util@7.0.2': {}
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
