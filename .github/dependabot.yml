@@ -11,6 +11,10 @@ updates:
       semver-major-days: 30
       semver-minor-days: 14
       semver-patch-days: 14
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
     groups:
       patches:
         applies-to: version-updates
@@ -32,6 +36,10 @@ updates:
       semver-major-days: 30
       semver-minor-days: 14
       semver-patch-days: 14
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
     groups:
       patches:
         applies-to: version-updates
@@ -46,3 +54,6 @@ updates:
       interval: "daily"
       time: "03:00"
       timezone: "Europe/London"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
