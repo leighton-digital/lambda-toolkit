@@ -89,6 +89,7 @@
     "@types/jest": "30.0.0",
     "@types/node": "25.1.0",
     "commitizen": "4.3.1",
+    "conventional-changelog-conventionalcommits": "9.1.0",
     "cz-conventional-changelog": "3.3.0",
     "http-errors": "2.0.1",
     "jest": "30.2.0",
