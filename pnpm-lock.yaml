@@ -28,8 +28,8 @@ importers:
         specifier: 2.31.0
         version: 2.31.0(@middy/core@7.0.2)
       '@aws-lambda-powertools/tracer':
-        specifier: 2.30.2
-        version: 2.30.2(@middy/core@7.0.2)
+        specifier: 2.31.0
+        version: 2.31.0(@middy/core@7.0.2)
       '@biomejs/biome':
         specifier: 2.3.15
         version: 2.3.15
@@ -254,9 +254,6 @@ packages:
       - jsonschema
       - semver
 
-  '@aws-lambda-powertools/commons@2.30.2':
-    resolution: {integrity: sha512-bhhrpUdCfpBGKllJfGyi5faf12mh6tjYmOf5DALgIym89NkidFphPdZtWl5l6IN1YhgO8HWPX4Yvmi4tPBE/uw==}
-
   '@aws-lambda-powertools/commons@2.31.0':
     resolution: {integrity: sha512-K5Hy3WtU/n0M8/kgsgw6OVlF709PHOfnTfsWrJS2Cs1vVjEeBvW22a6u9n3VPNpDeqJ7GIodmSkbuzvQzq6vaA==}
 
@@ -279,17 +276,17 @@ packages:
       '@middy/core':
         optional: true
 
-  '@aws-lambda-powertools/tracer@2.30.2':
-    resolution: {integrity: sha512-MWySKf5s5mDoI7ajXpuotNqWQaW/vKMo6KMWBZKiH8DjGsvJguqYx41WpvEmX2MKanG/sS6BoCYf18UcBgEKSA==}
+  '@aws-lambda-powertools/tracer@2.31.0':
+    resolution: {integrity: sha512-6ctdv2r0HzY1Tf2lbkMGD8WdrV/JEqFEk0ElUmXsnVXdvMwyojva3aD5qJVFl8V0rMsLzg0FsaJCr2Ok4ahjXA==}
     peerDependencies:
       '@middy/core': 4.x || 5.x || 6.x || 7.x
     peerDependenciesMeta:
       '@middy/core':
         optional: true
 
-  '@aws-sdk/types@3.936.0':
-    resolution: {integrity: sha512-uz0/VlMd2pP5MepdrHizd+T+OKfyK4r3OA9JI+L/lPKg0YFQosdJNCKisr6o70E3dh8iMpFYxF1UN/4uZsyARg==}
-    engines: {node: '>=18.0.0'}
+  '@aws-sdk/types@3.973.4':
+    resolution: {integrity: sha512-RW60aH26Bsc016Y9B98hC0Plx6fK5P2v/iQYwMzrSjiDh1qRMUCP6KrXHYEHe3uFvKiOC93Z9zk4BJsUi6Tj1Q==}
+    engines: {node: '>=20.0.0'}
 
   '@aws/lambda-invoke-store@0.2.3':
     resolution: {integrity: sha512-oLvsaPMTBejkkmHhjf09xTgk71mOqyr/409NKhRIL08If7AhVfUsJhVsx386uJaqNd42v9kWamQ9lFbkoC2dYw==}
@@ -1978,8 +1975,8 @@ packages:
     resolution: {integrity: sha512-QwYgloJ0sVNBeBuBs65cIkTbfzV/Q6ZNPCJ99EICFEdJYG50nGIY/uYXp+TbsdJReIuPr0a0kXmCvren3MbRRw==}
     engines: {node: '>=14.0.0'}
 
-  '@smithy/types@4.9.0':
-    resolution: {integrity: sha512-MvUbdnXDTwykR8cB1WZvNNwqoWVaTRA0RLlLmf/cIFNMM2cKWz01X4Ly6SMC4Kks30r8tT3Cty0jmeWfiuyHTA==}
+  '@smithy/types@4.13.0':
+    resolution: {integrity: sha512-COuLsZILbbQsdrwKQpkkpyep7lCsByxwj7m0Mg5v66/ZTyenlfBc40/QFQ5chO0YN/PNEH1Bi3fGtfXPnYNeDw==}
     engines: {node: '>=18.0.0'}
 
   '@standard-schema/spec@1.0.0':
@@ -7600,10 +7597,6 @@ snapshots:
 
   '@aws-cdk/cloud-assembly-schema@48.20.0': {}
 
-  '@aws-lambda-powertools/commons@2.30.2':
-    dependencies:
-      '@aws/lambda-invoke-store': 0.2.3
-
   '@aws-lambda-powertools/commons@2.31.0':
     dependencies:
       '@aws/lambda-invoke-store': 0.2.3
@@ -7622,16 +7615,16 @@ snapshots:
     optionalDependencies:
       '@middy/core': 7.0.2
 
-  '@aws-lambda-powertools/tracer@2.30.2(@middy/core@7.0.2)':
+  '@aws-lambda-powertools/tracer@2.31.0(@middy/core@7.0.2)':
     dependencies:
-      '@aws-lambda-powertools/commons': 2.30.2
+      '@aws-lambda-powertools/commons': 2.31.0
       aws-xray-sdk-core: 3.12.0
     optionalDependencies:
       '@middy/core': 7.0.2
 
-  '@aws-sdk/types@3.936.0':
+  '@aws-sdk/types@3.973.4':
     dependencies:
-      '@smithy/types': 4.9.0
+      '@smithy/types': 4.13.0
       tslib: 2.8.1
 
   '@aws/lambda-invoke-store@0.2.3': {}
@@ -9947,7 +9940,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 25.3.0
+      '@types/node': 25.2.3
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -10343,7 +10336,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@smithy/types@4.9.0':
+  '@smithy/types@4.13.0':
     dependencies:
       tslib: 2.8.1
 
@@ -10567,7 +10560,7 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 25.3.0
+      '@types/node': 25.2.3
 
   '@types/debug@4.1.12':
     dependencies:
@@ -11070,12 +11063,12 @@ snapshots:
 
   aws-xray-sdk-core@3.12.0:
     dependencies:
-      '@aws-sdk/types': 3.936.0
+      '@aws-sdk/types': 3.973.4
       '@smithy/service-error-classification': 2.1.5
       '@types/cls-hooked': 4.3.9
       atomic-batcher: 1.0.2
       cls-hooked: 4.2.2
-      semver: 7.7.3
+      semver: 7.7.4
 
   babel-jest@30.2.0(@babel/core@7.28.4):
     dependencies:
@@ -13352,7 +13345,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 25.3.0
+      '@types/node': 25.2.3
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
