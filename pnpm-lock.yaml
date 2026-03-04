@@ -23,13 +23,13 @@ importers:
     devDependencies:
       '@aws-lambda-powertools/logger':
         specifier: 2.31.0
-        version: 2.31.0(@middy/core@7.0.2)
+        version: 2.31.0(@middy/core@7.0.3)
       '@aws-lambda-powertools/metrics':
         specifier: 2.31.0
-        version: 2.31.0(@middy/core@7.0.2)
+        version: 2.31.0(@middy/core@7.0.3)
       '@aws-lambda-powertools/tracer':
         specifier: 2.31.0
-        version: 2.31.0(@middy/core@7.0.2)
+        version: 2.31.0(@middy/core@7.0.3)
       '@biomejs/biome':
         specifier: 2.4.2
         version: 2.4.2
@@ -40,11 +40,11 @@ importers:
         specifier: 20.4.1
         version: 20.4.1
       '@middy/core':
-        specifier: 7.0.2
-        version: 7.0.2
+        specifier: 7.0.3
+        version: 7.0.3
       '@middy/http-error-handler':
-        specifier: 7.0.2
-        version: 7.0.2
+        specifier: 7.0.3
+        version: 7.0.3
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@25.0.2(typescript@5.9.3))
@@ -1756,8 +1756,8 @@ packages:
       '@types/react': '>=16'
       react: '>=16'
 
-  '@middy/core@7.0.2':
-    resolution: {integrity: sha512-C4PEJxMjWFneqfQzsbWQ9BZ7Bfds9oqw74/fTuEeunI/0PA1KtGfbHDuU1SQH6lZ3rOp+VUIYh4YDho8qmc2Rg==}
+  '@middy/core@7.0.3':
+    resolution: {integrity: sha512-wndrjYQyDw75HWDSfB7Ighp8SDpYYC4iEB92f29EpmxRlW2VaopYrHQgDUh7wsoNp8VZJ2YoPM1M1CF7wgK/hA==}
     engines: {node: '>=22'}
     peerDependencies:
       '@aws/durable-execution-sdk-js': ^1.0.0
@@ -1765,12 +1765,12 @@ packages:
       '@aws/durable-execution-sdk-js':
         optional: true
 
-  '@middy/http-error-handler@7.0.2':
-    resolution: {integrity: sha512-uEd6ctFWjgOGUUSSYdEOYst6bfSg2P6Kb/fRr23f1ys1ssA6qR8/ttKH8PzZCe+hpuFhz+XGhOS/2sHzSSBEFQ==}
+  '@middy/http-error-handler@7.0.3':
+    resolution: {integrity: sha512-dkJmSnjk8T7UD8C08TIYb4gkx7uBWTLexyzPO2XOivaYIoldBS5lvbL7iMqXZ7SY+1cg29+lIAVOp0FwlunW4w==}
     engines: {node: '>=22'}
 
-  '@middy/util@7.0.2':
-    resolution: {integrity: sha512-81pP1Am7QarL6e2+SHYnDu83jxqgxM3sztHJNLDZ2B+YwzT+smGjMaDX10bFH8PvTDr/nic3QaNOe2X8UoCaBw==}
+  '@middy/util@7.0.3':
+    resolution: {integrity: sha512-uwbXjPr+CaB8FksZO7UTPAQnoi/Vq4pQ7E9mr0PMA3tDXOS475Ya0HY1Xncs5dpmE/bP07JcxS1b6swY1pnwiA==}
     engines: {node: '>=22'}
 
   '@napi-rs/wasm-runtime@0.2.12':
@@ -3915,6 +3915,10 @@ packages:
 
   fs-extra@11.3.3:
     resolution: {integrity: sha512-VWSRii4t0AFm6ixFFmLLx1t7wS1gh+ckoa84aOeapGum0h+EZd1EhEumSB+ZdDLnEPuucsVB9oB7cxJHap6Afg==}
+    engines: {node: '>=14.14'}
+
+  fs-extra@11.3.4:
+    resolution: {integrity: sha512-CTXd6rk/M3/ULNQj8FBqBWHYBVYybQ3VPBw0xGKFe3tuH7ytT6ACnvzpIQ3UZtB8yvUKC2cXn1a+x+5EVQLovA==}
     engines: {node: '>=14.14'}
 
   fs-extra@9.1.0:
@@ -7636,26 +7640,26 @@ snapshots:
     dependencies:
       '@aws/lambda-invoke-store': 0.2.3
 
-  '@aws-lambda-powertools/logger@2.31.0(@middy/core@7.0.2)':
+  '@aws-lambda-powertools/logger@2.31.0(@middy/core@7.0.3)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.31.0
       '@aws/lambda-invoke-store': 0.2.3
     optionalDependencies:
-      '@middy/core': 7.0.2
+      '@middy/core': 7.0.3
 
-  '@aws-lambda-powertools/metrics@2.31.0(@middy/core@7.0.2)':
+  '@aws-lambda-powertools/metrics@2.31.0(@middy/core@7.0.3)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.31.0
       '@aws/lambda-invoke-store': 0.2.3
     optionalDependencies:
-      '@middy/core': 7.0.2
+      '@middy/core': 7.0.3
 
-  '@aws-lambda-powertools/tracer@2.31.0(@middy/core@7.0.2)':
+  '@aws-lambda-powertools/tracer@2.31.0(@middy/core@7.0.3)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.31.0
       aws-xray-sdk-core: 3.12.0
     optionalDependencies:
-      '@middy/core': 7.0.2
+      '@middy/core': 7.0.3
 
   '@aws-sdk/types@3.973.4':
     dependencies:
@@ -10093,13 +10097,13 @@ snapshots:
       '@types/react': 19.2.2
       react: 19.2.4
 
-  '@middy/core@7.0.2': {}
+  '@middy/core@7.0.3': {}
 
-  '@middy/http-error-handler@7.0.2':
+  '@middy/http-error-handler@7.0.3':
     dependencies:
-      '@middy/util': 7.0.2
+      '@middy/util': 7.0.3
 
-  '@middy/util@7.0.2': {}
+  '@middy/util@7.0.3': {}
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
@@ -10273,7 +10277,7 @@ snapshots:
       aggregate-error: 5.0.0
       env-ci: 11.2.0
       execa: 9.6.1
-      fs-extra: 11.3.3
+      fs-extra: 11.3.4
       lodash-es: 4.17.23
       nerf-dart: 1.0.0
       normalize-url: 9.0.0
@@ -12431,6 +12435,12 @@ snapshots:
       universalify: 2.0.1
 
   fs-extra@11.3.3:
+    dependencies:
+      graceful-fs: 4.2.11
+      jsonfile: 6.2.0
+      universalify: 2.0.1
+
+  fs-extra@11.3.4:
     dependencies:
       graceful-fs: 4.2.11
       jsonfile: 6.2.0
