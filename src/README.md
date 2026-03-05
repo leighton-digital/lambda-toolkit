@@ -1,7 +1,7 @@
 # Core Utilities
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/leighton-digital/lambda-toolkit/blob/main/LICENSE)
-![Maintained](https://img.shields.io/maintenance/yes/2025)
+![Maintained](https://img.shields.io/maintenance/yes/2026)
 
 A comprehensive collection of utilities designed for **AWS Lambda functions** and **CDK infrastructure**, providing essential functionality for building robust serverless applications.
 
