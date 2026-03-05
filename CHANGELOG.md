@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/leighton-digital/lambda-toolkit/compare/v1.3.1...v1.4.0) (2026-03-05)
+
+
+### Features
+
+* change peer dependencies for midy ([d7b591c](https://github.com/leighton-digital/lambda-toolkit/commit/d7b591c41a26a4ba6e1ea952ffd3a9a3a10eebb6))
+
 ## [1.3.1](https://github.com/leighton-digital/lambda-toolkit/compare/v1.3.0...v1.3.1) (2026-02-16)
 
 # [1.3.0](https://github.com/leighton-digital/lambda-toolkit/compare/v1.2.2...v1.3.0) (2026-02-16)
