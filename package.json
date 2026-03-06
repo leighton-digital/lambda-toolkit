@@ -80,7 +80,7 @@
     "@biomejs/biome": "2.4.2",
     "@commitlint/cli": "20.4.1",
     "@commitlint/config-conventional": "20.4.1",
-    "@middy/core": "7.0.3",
+    "@middy/core": "7.1.0",
     "@middy/http-error-handler": "7.0.3",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.1",
