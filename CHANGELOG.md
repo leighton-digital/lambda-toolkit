@@ -1,3 +1,5 @@
+## [1.4.1](https://github.com/leighton-digital/lambda-toolkit/compare/v1.4.0...v1.4.1) (2026-03-18)
+
 # [1.4.0](https://github.com/leighton-digital/lambda-toolkit/compare/v1.3.1...v1.4.0) (2026-03-05)
 
 
