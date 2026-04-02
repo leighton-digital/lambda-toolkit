@@ -95,7 +95,7 @@
     "jest": "30.3.0",
     "lefthook": "2.1.4",
     "typedoc": "0.28.17",
-    "typedoc-plugin-markdown": "4.10.0",
+    "typedoc-plugin-markdown": "4.11.0",
     "typescript": "5.9.3",
     "zod": "4.3.6"
   },
