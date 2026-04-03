@@ -23,13 +23,13 @@ importers:
     devDependencies:
       '@aws-lambda-powertools/logger':
         specifier: 2.32.0
-        version: 2.32.0(@middy/core@7.1.7)
+        version: 2.32.0(@middy/core@7.2.1)
       '@aws-lambda-powertools/metrics':
         specifier: 2.31.0
-        version: 2.31.0(@middy/core@7.1.7)
+        version: 2.31.0(@middy/core@7.2.1)
       '@aws-lambda-powertools/tracer':
         specifier: 2.31.0
-        version: 2.31.0(@middy/core@7.1.7)
+        version: 2.31.0(@middy/core@7.2.1)
       '@biomejs/biome':
         specifier: 2.4.8
         version: 2.4.8
@@ -40,8 +40,8 @@ importers:
         specifier: 20.5.0
         version: 20.5.0
       '@middy/core':
-        specifier: 7.1.7
-        version: 7.1.7
+        specifier: 7.2.1
+        version: 7.2.1
       '@middy/http-error-handler':
         specifier: 7.2.1
         version: 7.2.1
@@ -1856,8 +1856,8 @@ packages:
       '@types/react': '>=16'
       react: '>=16'
 
-  '@middy/core@7.1.7':
-    resolution: {integrity: sha512-EkHykvCg+VvqSVowxbpCGdu1M5WBYo1RFkRvPYU8j59oUgItWkOhk1fuKsZSGmzdELpBHHYxku99VoVwNJHYUA==}
+  '@middy/core@7.2.1':
+    resolution: {integrity: sha512-KFtxLUhHQcBezrusBt5F2VKYY/p3Po2rM2OByyeZsqpzSY9D8iapsmJGaiHFgXbfuEUS5B0BxTXixFcxjChLUg==}
     engines: {node: '>=22'}
     peerDependencies:
       '@aws/durable-execution-sdk-js': ^1.0.0
@@ -1867,10 +1867,6 @@ packages:
 
   '@middy/http-error-handler@7.2.1':
     resolution: {integrity: sha512-n1kVnoM0B0xK0ZA0DeH11Fvn6LGSYDATyUv/zDAoyMkQq7CU5wqnNG6DAULbmEXBFksyDdidCrAiMHXa5t7efA==}
-    engines: {node: '>=22'}
-
-  '@middy/util@7.1.7':
-    resolution: {integrity: sha512-lHTBRlZNivUuKBR9M4xeIrhuEXxOJym6XAi8VE4p+SMZDgkNt4mjm7INyu5Xc/J5CxDdu295QbPYhTAUlzl5Bw==}
     engines: {node: '>=22'}
 
   '@middy/util@7.2.1':
@@ -7764,26 +7760,26 @@ snapshots:
     dependencies:
       '@aws/lambda-invoke-store': 0.2.4
 
-  '@aws-lambda-powertools/logger@2.32.0(@middy/core@7.1.7)':
+  '@aws-lambda-powertools/logger@2.32.0(@middy/core@7.2.1)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.32.0
       '@aws/lambda-invoke-store': 0.2.4
     optionalDependencies:
-      '@middy/core': 7.1.7
+      '@middy/core': 7.2.1
 
-  '@aws-lambda-powertools/metrics@2.31.0(@middy/core@7.1.7)':
+  '@aws-lambda-powertools/metrics@2.31.0(@middy/core@7.2.1)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.31.0
       '@aws/lambda-invoke-store': 0.2.3
     optionalDependencies:
-      '@middy/core': 7.1.7
+      '@middy/core': 7.2.1
 
-  '@aws-lambda-powertools/tracer@2.31.0(@middy/core@7.1.7)':
+  '@aws-lambda-powertools/tracer@2.31.0(@middy/core@7.2.1)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.31.0
       aws-xray-sdk-core: 3.12.0
     optionalDependencies:
-      '@middy/core': 7.1.7
+      '@middy/core': 7.2.1
 
   '@aws-sdk/types@3.973.4':
     dependencies:
@@ -10353,15 +10349,13 @@ snapshots:
       '@types/react': 19.2.2
       react: 19.2.4
 
-  '@middy/core@7.1.7':
+  '@middy/core@7.2.1':
     dependencies:
-      '@middy/util': 7.1.7
+      '@middy/util': 7.2.1
 
   '@middy/http-error-handler@7.2.1':
     dependencies:
       '@middy/util': 7.2.1
-
-  '@middy/util@7.1.7': {}
 
   '@middy/util@7.2.1': {}
 
