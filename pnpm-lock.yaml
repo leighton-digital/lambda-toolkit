@@ -28,8 +28,8 @@ importers:
         specifier: 2.32.0
         version: 2.32.0(@middy/core@7.2.2)
       '@aws-lambda-powertools/tracer':
-        specifier: 2.32.0
-        version: 2.32.0(@middy/core@7.2.2)
+        specifier: 2.33.0
+        version: 2.33.0(@middy/core@7.2.2)
       '@biomejs/biome':
         specifier: 2.4.11
         version: 2.4.11
@@ -245,6 +245,9 @@ packages:
   '@aws-lambda-powertools/commons@2.32.0':
     resolution: {integrity: sha512-vsdakJDZu/KkJ5+1WHkawQ5R06aCK0XYB3nc3tpcBfO1YmOHkn+QpuGiZtkmpzIykGPAO9lnBjK5joAeim2o4A==}
 
+  '@aws-lambda-powertools/commons@2.33.0':
+    resolution: {integrity: sha512-cXGfWT4FXtLO7Ny/shep6V/xYzgVN7hvukOA0bTa4nlg2GWiQsPoBoKvCEcfQ9I8GIS0tPyDfRkdx80SvA7LpA==}
+
   '@aws-lambda-powertools/logger@2.32.0':
     resolution: {integrity: sha512-ZfomsMv4FnxYkgUvU9S6BPrTzd+ntPiIBZcrvSNz+/aPvVwu2BGHSKDuVlXa7nr6rB1wjzaA5bmLVTESIdnsdQ==}
     peerDependencies:
@@ -264,16 +267,16 @@ packages:
       '@middy/core':
         optional: true
 
-  '@aws-lambda-powertools/tracer@2.32.0':
-    resolution: {integrity: sha512-rMlDUU9gukUuYLWBEvfYamzyg+7BbZe2tKE3gA0VFHnkZ/F047b670jXm0s9nnqVGxxLPZJ3SeBLxE35g6yiYQ==}
+  '@aws-lambda-powertools/tracer@2.33.0':
+    resolution: {integrity: sha512-Fv9uKyG42nyawPJlK2O4jQtGslaGWp506sTzM93wGPcN9SOx50sa88WNRlmtn7Ftv5kSW2DJgIF+1GNLiSiUDQ==}
     peerDependencies:
       '@middy/core': 4.x || 5.x || 6.x || 7.x
     peerDependenciesMeta:
       '@middy/core':
         optional: true
 
-  '@aws-sdk/types@3.973.6':
-    resolution: {integrity: sha512-Atfcy4E++beKtwJHiDln2Nby8W/mam64opFPTiHEqgsthqeydFS1pY+OUlN1ouNOmf8ArPU/6cDS65anOP3KQw==}
+  '@aws-sdk/types@3.973.8':
+    resolution: {integrity: sha512-gjlAdtHMbtR9X5iIhVUvbVcy55KnznpC6bkDUWW9z915bi0ckdUr5cjf16Kp6xq0bP5HBD2xzgbL9F9Quv5vUw==}
     engines: {node: '>=20.0.0'}
 
   '@aws/lambda-invoke-store@0.2.4':
@@ -2139,8 +2142,8 @@ packages:
     resolution: {integrity: sha512-QwYgloJ0sVNBeBuBs65cIkTbfzV/Q6ZNPCJ99EICFEdJYG50nGIY/uYXp+TbsdJReIuPr0a0kXmCvren3MbRRw==}
     engines: {node: '>=14.0.0'}
 
-  '@smithy/types@4.13.1':
-    resolution: {integrity: sha512-787F3yzE2UiJIQ+wYW1CVg2odHjmaWLGksnKQHUrK/lYZSEcy1msuLVvxaR/sI2/aDe9U+TBuLsXnr3vod1g0g==}
+  '@smithy/types@4.14.1':
+    resolution: {integrity: sha512-59b5HtSVrVR/eYNei3BUj3DCPKD/G7EtDDe7OEJE7i7FtQFugYo6MxbotS8mVJkLNVf8gYaAlEBwwtJ9HzhWSg==}
     engines: {node: '>=18.0.0'}
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0':
@@ -7747,6 +7750,10 @@ snapshots:
     dependencies:
       '@aws/lambda-invoke-store': 0.2.4
 
+  '@aws-lambda-powertools/commons@2.33.0':
+    dependencies:
+      '@aws/lambda-invoke-store': 0.2.4
+
   '@aws-lambda-powertools/logger@2.32.0(@middy/core@7.2.2)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.32.0
@@ -7761,16 +7768,16 @@ snapshots:
     optionalDependencies:
       '@middy/core': 7.2.2
 
-  '@aws-lambda-powertools/tracer@2.32.0(@middy/core@7.2.2)':
+  '@aws-lambda-powertools/tracer@2.33.0(@middy/core@7.2.2)':
     dependencies:
-      '@aws-lambda-powertools/commons': 2.32.0
+      '@aws-lambda-powertools/commons': 2.33.0
       aws-xray-sdk-core: 3.12.0
     optionalDependencies:
       '@middy/core': 7.2.2
 
-  '@aws-sdk/types@3.973.6':
+  '@aws-sdk/types@3.973.8':
     dependencies:
-      '@smithy/types': 4.13.1
+      '@smithy/types': 4.14.1
       tslib: 2.8.1
 
   '@aws/lambda-invoke-store@0.2.4': {}
@@ -10709,7 +10716,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@smithy/types@4.13.1':
+  '@smithy/types@4.14.1':
     dependencies:
       tslib: 2.8.1
 
@@ -11049,7 +11056,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 25.6.0
+      '@types/node': 17.0.45
 
   '@types/send@0.17.6':
     dependencies:
@@ -11403,7 +11410,7 @@ snapshots:
 
   aws-xray-sdk-core@3.12.0:
     dependencies:
-      '@aws-sdk/types': 3.973.6
+      '@aws-sdk/types': 3.973.8
       '@smithy/service-error-classification': 2.1.5
       '@types/cls-hooked': 4.3.9
       atomic-batcher: 1.0.2
