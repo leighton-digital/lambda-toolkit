@@ -25,8 +25,8 @@ importers:
         specifier: 2.32.0
         version: 2.32.0(@middy/core@7.2.2)
       '@aws-lambda-powertools/metrics':
-        specifier: 2.32.0
-        version: 2.32.0(@middy/core@7.2.2)
+        specifier: 2.33.0
+        version: 2.33.0(@middy/core@7.2.2)
       '@aws-lambda-powertools/tracer':
         specifier: 2.32.0
         version: 2.32.0(@middy/core@7.2.2)
@@ -245,6 +245,9 @@ packages:
   '@aws-lambda-powertools/commons@2.32.0':
     resolution: {integrity: sha512-vsdakJDZu/KkJ5+1WHkawQ5R06aCK0XYB3nc3tpcBfO1YmOHkn+QpuGiZtkmpzIykGPAO9lnBjK5joAeim2o4A==}
 
+  '@aws-lambda-powertools/commons@2.33.0':
+    resolution: {integrity: sha512-cXGfWT4FXtLO7Ny/shep6V/xYzgVN7hvukOA0bTa4nlg2GWiQsPoBoKvCEcfQ9I8GIS0tPyDfRkdx80SvA7LpA==}
+
   '@aws-lambda-powertools/logger@2.32.0':
     resolution: {integrity: sha512-ZfomsMv4FnxYkgUvU9S6BPrTzd+ntPiIBZcrvSNz+/aPvVwu2BGHSKDuVlXa7nr6rB1wjzaA5bmLVTESIdnsdQ==}
     peerDependencies:
@@ -256,8 +259,8 @@ packages:
       '@middy/core':
         optional: true
 
-  '@aws-lambda-powertools/metrics@2.32.0':
-    resolution: {integrity: sha512-xYLPyNmV66PJNUmDiGTJvlalThTn0N4NYFunU03O1iXTTUWqFtTqggsX7kdCieuN+pyc8wbHjfLZtsB0QH/Kag==}
+  '@aws-lambda-powertools/metrics@2.33.0':
+    resolution: {integrity: sha512-VFAd+k6WmOQv3O3dWCyRbZyCBWmIpZerh3VEw2S4Do8AMyiT8ccFAkf14H7m4XE9f0zFCzqgaWunFSTr7385Aw==}
     peerDependencies:
       '@middy/core': 4.x || 5.x || 6.x || 7.x
     peerDependenciesMeta:
@@ -7747,6 +7750,10 @@ snapshots:
     dependencies:
       '@aws/lambda-invoke-store': 0.2.4
 
+  '@aws-lambda-powertools/commons@2.33.0':
+    dependencies:
+      '@aws/lambda-invoke-store': 0.2.4
+
   '@aws-lambda-powertools/logger@2.32.0(@middy/core@7.2.2)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.32.0
@@ -7754,9 +7761,9 @@ snapshots:
     optionalDependencies:
       '@middy/core': 7.2.2
 
-  '@aws-lambda-powertools/metrics@2.32.0(@middy/core@7.2.2)':
+  '@aws-lambda-powertools/metrics@2.33.0(@middy/core@7.2.2)':
     dependencies:
-      '@aws-lambda-powertools/commons': 2.32.0
+      '@aws-lambda-powertools/commons': 2.33.0
       '@aws/lambda-invoke-store': 0.2.4
     optionalDependencies:
       '@middy/core': 7.2.2
