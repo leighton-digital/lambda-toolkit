@@ -43,8 +43,8 @@ importers:
         specifier: 7.2.3
         version: 7.2.3
       '@middy/http-error-handler':
-        specifier: 7.2.3
-        version: 7.2.3
+        specifier: 7.3.0
+        version: 7.3.0
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@25.0.2(typescript@5.9.3))
@@ -1887,12 +1887,16 @@ packages:
       '@aws/durable-execution-sdk-js':
         optional: true
 
-  '@middy/http-error-handler@7.2.3':
-    resolution: {integrity: sha512-b4zA7m6CJ3aqR+J2L9F3sZtt4uxzR39D780JeiKq5cZkj9UBAgAcFIx6QkDpbLyjTq+1sDXB4Q1QztcgHSAVfg==}
+  '@middy/http-error-handler@7.3.0':
+    resolution: {integrity: sha512-r1rNy6pRt3IY680CsCaaOZTyK3sW3OqmaqO7KGlpE4EbuS5D3icVPn8rcvDNaKj2Fxu2pjPZQDN72w+s1SY3sg==}
     engines: {node: '>=22'}
 
   '@middy/util@7.2.3':
     resolution: {integrity: sha512-iLyQFD1mFQGk+dpBIbm/PCikLwZl46NQ4OEIYbxodPVcvQ4ROOFW1Af/d8INA1T7UwBbV2+PRd1s5+0fyFL8Hg==}
+    engines: {node: '>=22'}
+
+  '@middy/util@7.3.0':
+    resolution: {integrity: sha512-vIVI0iqcLSJ6HztsZamYrc66t0eyrCY/t8VEafP6sXhDu7jsptfNC0x+vt5H7SrTCilOcmgrKnEyVcdB4GDTXA==}
     engines: {node: '>=22'}
 
   '@napi-rs/wasm-runtime@0.2.12':
@@ -4264,8 +4268,8 @@ packages:
     resolution: {integrity: sha512-puUZAUKT5m8Zzvs72XWy3HtvVbTWljRE66cP60bxJzAqf2DgICo7lYTY2IHUmLnNpjYvw5bvmoHvPc0QO2a62w==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
-  hosted-git-info@9.0.2:
-    resolution: {integrity: sha512-M422h7o/BR3rmCQ8UHi7cyyMqKltdP9Uo+J2fXK+RSAY+wTcKOIRyhTuKv4qn+DJf3g+PL890AzId5KZpX+CBg==}
+  hosted-git-info@9.0.3:
+    resolution: {integrity: sha512-Hc+ghLoSt6QaYZUv0WBiIvmMDZuZZ7oaDvdH8MbfOO4lOsxdXLEvuC6ePoGs9H1X9oCLyq6+NVN0MKqD+ydxyg==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
   hpack.js@2.1.6:
@@ -4634,8 +4638,8 @@ packages:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
     engines: {node: '>=0.10.0'}
 
-  issue-parser@7.0.1:
-    resolution: {integrity: sha512-3YZcUUR2Wt1WsapF+S/WiA2WmlW0cWAoPccMqne7AxEBhCdFeTPjfv/Axb8V2gyCgY3nRw+ksZ3xSUX+R47iAg==}
+  issue-parser@7.0.2:
+    resolution: {integrity: sha512-7atWPjhGEIX3JEtMrOYd8TKzboYlq+5sNbdl9POiLYOI14G5HZiQbZP0Xj5EZdrufQVXfJlpTV0hys0CuxwxZw==}
     engines: {node: ^18.17 || >=20.6.1}
 
   istanbul-lib-coverage@3.2.2:
@@ -10338,11 +10342,13 @@ snapshots:
     dependencies:
       '@middy/util': 7.2.3
 
-  '@middy/http-error-handler@7.2.3':
+  '@middy/http-error-handler@7.3.0':
     dependencies:
-      '@middy/util': 7.2.3
+      '@middy/util': 7.3.0
 
   '@middy/util@7.2.3': {}
+
+  '@middy/util@7.3.0': {}
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
@@ -10588,7 +10594,7 @@ snapshots:
       dir-glob: 3.0.1
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
-      issue-parser: 7.0.1
+      issue-parser: 7.0.2
       lodash-es: 4.18.1
       mime: 4.1.0
       p-filter: 4.1.0
@@ -13062,7 +13068,7 @@ snapshots:
     dependencies:
       lru-cache: 10.4.3
 
-  hosted-git-info@9.0.2:
+  hosted-git-info@9.0.3:
     dependencies:
       lru-cache: 11.3.5
 
@@ -13391,7 +13397,7 @@ snapshots:
 
   isobject@3.0.1: {}
 
-  issue-parser@7.0.1:
+  issue-parser@7.0.2:
     dependencies:
       lodash.capitalize: 4.2.1
       lodash.escaperegexp: 4.1.2
@@ -14719,7 +14725,7 @@ snapshots:
 
   normalize-package-data@8.0.0:
     dependencies:
-      hosted-git-info: 9.0.2
+      hosted-git-info: 9.0.3
       semver: 7.7.4
       validate-npm-package-license: 3.0.4
 
@@ -15952,7 +15958,7 @@ snapshots:
       get-stream: 6.0.1
       git-log-parser: 1.2.1
       hook-std: 4.0.0
-      hosted-git-info: 9.0.2
+      hosted-git-info: 9.0.3
       import-from-esm: 2.0.0
       lodash-es: 4.18.1
       marked: 15.0.12
