@@ -43,8 +43,8 @@ importers:
         specifier: 7.2.3
         version: 7.2.3
       '@middy/http-error-handler':
-        specifier: 7.3.0
-        version: 7.3.0
+        specifier: 7.3.1
+        version: 7.3.1
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@25.0.2(typescript@5.9.3))
@@ -1887,16 +1887,16 @@ packages:
       '@aws/durable-execution-sdk-js':
         optional: true
 
-  '@middy/http-error-handler@7.3.0':
-    resolution: {integrity: sha512-r1rNy6pRt3IY680CsCaaOZTyK3sW3OqmaqO7KGlpE4EbuS5D3icVPn8rcvDNaKj2Fxu2pjPZQDN72w+s1SY3sg==}
+  '@middy/http-error-handler@7.3.1':
+    resolution: {integrity: sha512-N7pAkFjc55mOYT49U7pN18Ut6gYOriUVcSSO1FT6kY2fFn7EyXDcFaEo+LfrWZp9lMMZ1L8qEWJtDo725t79aA==}
     engines: {node: '>=22'}
 
   '@middy/util@7.2.3':
     resolution: {integrity: sha512-iLyQFD1mFQGk+dpBIbm/PCikLwZl46NQ4OEIYbxodPVcvQ4ROOFW1Af/d8INA1T7UwBbV2+PRd1s5+0fyFL8Hg==}
     engines: {node: '>=22'}
 
-  '@middy/util@7.3.0':
-    resolution: {integrity: sha512-vIVI0iqcLSJ6HztsZamYrc66t0eyrCY/t8VEafP6sXhDu7jsptfNC0x+vt5H7SrTCilOcmgrKnEyVcdB4GDTXA==}
+  '@middy/util@7.3.1':
+    resolution: {integrity: sha512-dx/K9U4oRqdxLGW8s5nF3FsOiH63XKWmqTbm6v5m9HpzUvSgdyhSRo8Ghw0F4XWjPzLicAbFJyHOBpks5ybaBA==}
     engines: {node: '>=22'}
 
   '@napi-rs/wasm-runtime@0.2.12':
@@ -5083,8 +5083,8 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
-  lru-cache@11.3.5:
-    resolution: {integrity: sha512-NxVFwLAnrd9i7KUBxC4DrUhmgjzOs+1Qm50D3oF1/oL+r1NpZ4gA7xvG0/zJ8evR7zIKn4vLf7qTNduWFtCrRw==}
+  lru-cache@11.3.6:
+    resolution: {integrity: sha512-Gf/KoL3C/MlI7Bt0PGI9I+TeTC/I6r/csU58N4BSNc4lppLBeKsOdFYkK+dX0ABDUMJNfCHTyPpzwwO21Awd3A==}
     engines: {node: 20 || >=22}
 
   lru-cache@5.1.1:
@@ -10342,13 +10342,13 @@ snapshots:
     dependencies:
       '@middy/util': 7.2.3
 
-  '@middy/http-error-handler@7.3.0':
+  '@middy/http-error-handler@7.3.1':
     dependencies:
-      '@middy/util': 7.3.0
+      '@middy/util': 7.3.1
 
   '@middy/util@7.2.3': {}
 
-  '@middy/util@7.3.0': {}
+  '@middy/util@7.3.1': {}
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
@@ -13070,7 +13070,7 @@ snapshots:
 
   hosted-git-info@9.0.3:
     dependencies:
-      lru-cache: 11.3.5
+      lru-cache: 11.3.6
 
   hpack.js@2.1.6:
     dependencies:
@@ -14030,7 +14030,7 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
-  lru-cache@11.3.5: {}
+  lru-cache@11.3.6: {}
 
   lru-cache@5.1.1:
     dependencies:
