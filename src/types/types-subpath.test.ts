@@ -1,11 +1,14 @@
 describe('src/types index module', () => {
   it('does not transitively load middy or powertools middleware when required directly', () => {
     jest.isolateModules(() => {
+      const before = new Set(Object.keys(require.cache ?? {}));
       require('./index');
-      const loaded = Object.keys(require.cache ?? {});
-      expect(loaded.some((p) => p.includes('@middy/'))).toBe(false);
+      const newEntries = Object.keys(require.cache ?? {}).filter(
+        (p) => !before.has(p),
+      );
+      expect(newEntries.some((p) => p.includes('@middy/'))).toBe(false);
       expect(
-        loaded.some(
+        newEntries.some(
           (p) =>
             p.includes('@aws-lambda-powertools') && p.includes('middleware'),
         ),
