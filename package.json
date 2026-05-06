@@ -116,5 +116,10 @@
     "constructs": "^10.4.2",
     "http-errors": "^2.0.0",
     "zod": "^4.1.12"
+  },
+  "pnpm": {
+    "overrides": {
+      "webpack": "5.105.0"
+    }
   }
 }
