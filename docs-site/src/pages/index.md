@@ -62,6 +62,12 @@ import {
 } from '@leighton-digital/lambda-toolkit';
 ```
 
+### Sub-path entrypoints
+
+For **CDK stacks**, **infra tests**, and other code that only needs shared enums and types (for example `Stage`, `Region`, `EventMessage`, `ResourceNameParts`, `Tags`), import from **`@leighton-digital/lambda-toolkit/types`**. That entrypoint does not load `@middy/*` or Powertools middleware, so you avoid having to mock them when the root package import is not needed.
+
+The root import still loads the full surface (including `withHttpHandler`); use **`/types`** when you only need types from [src/types/](src/types/).
+
 ### Basic HTTP Handler Example
 
 Here's a complete example showing how to use the HTTP handler with validation and error handling:
