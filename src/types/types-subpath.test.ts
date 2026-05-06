@@ -1,5 +1,5 @@
-describe('./types sub-path entry', () => {
-  it('does not transitively load middy or powertools middleware', () => {
+describe('src/types index module', () => {
+  it('does not transitively load middy or powertools middleware when required directly', () => {
     jest.isolateModules(() => {
       require('./index');
       const loaded = Object.keys(require.cache ?? {});
