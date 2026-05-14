@@ -23,13 +23,13 @@ importers:
     devDependencies:
       '@aws-lambda-powertools/logger':
         specifier: 2.33.0
-        version: 2.33.0(@middy/core@7.3.3)
+        version: 2.33.0(@middy/core@7.3.4)
       '@aws-lambda-powertools/metrics':
         specifier: 2.33.0
-        version: 2.33.0(@middy/core@7.3.3)
+        version: 2.33.0(@middy/core@7.3.4)
       '@aws-lambda-powertools/tracer':
         specifier: 2.33.0
-        version: 2.33.0(@middy/core@7.3.3)
+        version: 2.33.0(@middy/core@7.3.4)
       '@biomejs/biome':
         specifier: 2.4.13
         version: 2.4.13
@@ -40,11 +40,11 @@ importers:
         specifier: 20.5.0
         version: 20.5.0
       '@middy/core':
-        specifier: 7.3.3
-        version: 7.3.3
+        specifier: 7.3.4
+        version: 7.3.4
       '@middy/http-error-handler':
-        specifier: 7.3.3
-        version: 7.3.3
+        specifier: 7.3.4
+        version: 7.3.4
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@25.0.2(typescript@5.9.3))
@@ -1878,8 +1878,8 @@ packages:
       '@types/react': '>=16'
       react: '>=16'
 
-  '@middy/core@7.3.3':
-    resolution: {integrity: sha512-Wy6zjpaMo3yiU3+GR2d8HQhx7jnuDkPL5O2vSzLgw2OJmTkrMRREz8MMVUq24XrWyR1OX+xGRqSJJwC7NJP60A==}
+  '@middy/core@7.3.4':
+    resolution: {integrity: sha512-xYjsb6E0jYKoZGgJn1KeZPPTz0uwgH4izT7S8GoLwUCyiIdFJg4EpNdm3NXpi7VvrGbrvxk5giZf8VlIaoyPog==}
     engines: {node: '>=22'}
     peerDependencies:
       '@aws/durable-execution-sdk-js': ^1.0.0
@@ -1887,12 +1887,12 @@ packages:
       '@aws/durable-execution-sdk-js':
         optional: true
 
-  '@middy/http-error-handler@7.3.3':
-    resolution: {integrity: sha512-9BiuuhraTgPGoRpN8dzGz6aK/tK71+9N3e6XRCCSHFXTc7At108j+GxFRf0KJs30BHAQyHJVdS3fZlqYhBWESg==}
+  '@middy/http-error-handler@7.3.4':
+    resolution: {integrity: sha512-Vx3HMXWEhyr/i0eebTR+b0ul3zEPbohEZ9ul68DLJV2qcQI/mACZrLswmykRYWh7yM+bJ37L2ldrmOoQ6wJ3Sg==}
     engines: {node: '>=22'}
 
-  '@middy/util@7.3.3':
-    resolution: {integrity: sha512-BR6zrbF3utbVobZfFa1eEbOu7u51uzrtQVJCAS3So/5dzlPF/8Q9Ediwu4lV8y1gLGzWAuhbZZL8JBWX6O4Bcg==}
+  '@middy/util@7.3.4':
+    resolution: {integrity: sha512-d0CQaKAYnE4Ot3uxnfpHCJIHZVS6bkJv4mVJ9pXxtfCUwZtpi5/tlBp47y1CsYSXAGgCnd2c/O7U1Hd21kSzUA==}
     engines: {node: '>=22'}
 
   '@napi-rs/wasm-runtime@0.2.12':
@@ -1955,8 +1955,8 @@ packages:
     resolution: {integrity: sha512-KMQIfq5sOPpkQYajXHwnhjCC0slzCNScLHs9JafXc4RAJI+9f+jNDlBNaIMTvazOPLgb4BnlhGJOTbnN0wIjPw==}
     engines: {node: '>= 20'}
 
-  '@octokit/request@10.0.8':
-    resolution: {integrity: sha512-SJZNwY9pur9Agf7l87ywFi14W+Hd9Jg6Ifivsd33+/bGUQIjNujdFiXII2/qSlN2ybqUHfp5xpekMEjIBTjlSw==}
+  '@octokit/request@10.0.9':
+    resolution: {integrity: sha512-o8Bi3f608eyM+7BmBiUWxFsdjLb3/ym1cQek5LZOv9KkZcxRrHCPhhRzm6xjO6HVZ85ItD6+sTsjxo821SVa/A==}
     engines: {node: '>= 20'}
 
   '@octokit/types@16.0.0':
@@ -3268,6 +3268,10 @@ packages:
   content-type@1.0.5:
     resolution: {integrity: sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA==}
     engines: {node: '>= 0.6'}
+
+  content-type@2.0.0:
+    resolution: {integrity: sha512-j/O/d7GcZCyNl7/hwZAb606rzqkyvaDctLmckbxLzHvFBzTJHuGEdodATcP3yIRoDrLHkIATJuvzbFlp/ki2cQ==}
+    engines: {node: '>=18'}
 
   conventional-changelog-angular@8.3.0:
     resolution: {integrity: sha512-DOuBwYSqWzfwuRByY9O4oOIvDlkUCTDzfbOgcSbkY+imXXj+4tmrEFao3K+FxemClYfYnZzsvudbwrhje9VHDA==}
@@ -7753,26 +7757,26 @@ snapshots:
     dependencies:
       '@aws/lambda-invoke-store': 0.2.4
 
-  '@aws-lambda-powertools/logger@2.33.0(@middy/core@7.3.3)':
+  '@aws-lambda-powertools/logger@2.33.0(@middy/core@7.3.4)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.33.0
       '@aws/lambda-invoke-store': 0.2.4
     optionalDependencies:
-      '@middy/core': 7.3.3
+      '@middy/core': 7.3.4
 
-  '@aws-lambda-powertools/metrics@2.33.0(@middy/core@7.3.3)':
+  '@aws-lambda-powertools/metrics@2.33.0(@middy/core@7.3.4)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.33.0
       '@aws/lambda-invoke-store': 0.2.4
     optionalDependencies:
-      '@middy/core': 7.3.3
+      '@middy/core': 7.3.4
 
-  '@aws-lambda-powertools/tracer@2.33.0(@middy/core@7.3.3)':
+  '@aws-lambda-powertools/tracer@2.33.0(@middy/core@7.3.4)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.33.0
       aws-xray-sdk-core: 3.12.0
     optionalDependencies:
-      '@middy/core': 7.3.3
+      '@middy/core': 7.3.4
 
   '@aws-sdk/types@3.973.8':
     dependencies:
@@ -10335,15 +10339,15 @@ snapshots:
       '@types/react': 19.2.14
       react: 19.2.5
 
-  '@middy/core@7.3.3':
+  '@middy/core@7.3.4':
     dependencies:
-      '@middy/util': 7.3.3
+      '@middy/util': 7.3.4
 
-  '@middy/http-error-handler@7.3.3':
+  '@middy/http-error-handler@7.3.4':
     dependencies:
-      '@middy/util': 7.3.3
+      '@middy/util': 7.3.4
 
-  '@middy/util@7.3.3': {}
+  '@middy/util@7.3.4': {}
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
@@ -10372,7 +10376,7 @@ snapshots:
     dependencies:
       '@octokit/auth-token': 6.0.0
       '@octokit/graphql': 9.0.3
-      '@octokit/request': 10.0.8
+      '@octokit/request': 10.0.9
       '@octokit/request-error': 7.1.0
       '@octokit/types': 16.0.0
       before-after-hook: 4.0.0
@@ -10385,7 +10389,7 @@ snapshots:
 
   '@octokit/graphql@9.0.3':
     dependencies:
-      '@octokit/request': 10.0.8
+      '@octokit/request': 10.0.9
       '@octokit/types': 16.0.0
       universal-user-agent: 7.0.3
 
@@ -10413,11 +10417,12 @@ snapshots:
     dependencies:
       '@octokit/types': 16.0.0
 
-  '@octokit/request@10.0.8':
+  '@octokit/request@10.0.9':
     dependencies:
       '@octokit/endpoint': 11.0.3
       '@octokit/request-error': 7.1.0
       '@octokit/types': 16.0.0
+      content-type: 2.0.0
       fast-content-type-parse: 3.0.0
       json-with-bigint: 3.5.8
       universal-user-agent: 7.0.3
@@ -11925,6 +11930,8 @@ snapshots:
       safe-buffer: 5.2.1
 
   content-type@1.0.5: {}
+
+  content-type@2.0.0: {}
 
   conventional-changelog-angular@8.3.0:
     dependencies:
