@@ -10,10 +10,6 @@ const config: Config = {
   favicon:
     'https://cdn.prod.website-files.com/673b05e9b4f6306838c02cd7/673db2ea588656e73cdd710f_Favicon.png',
 
-  future: {
-    v4: true,
-  },
-
   // GitHub Pages deployment
   url: 'https://leighton.github.io', // Your org's GitHub Pages URL
   baseUrl: '/lambda-toolkit', // Repo name as base path
@@ -23,7 +19,6 @@ const config: Config = {
   projectName: 'lambda-toolkit', // Repo name
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
@@ -41,6 +36,9 @@ const config: Config = {
   ],
 
   markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
     parseFrontMatter: async (params) => {
       const res = await params.defaultParseFrontMatter(params);
       if (res.frontMatter.hide_title === undefined) {

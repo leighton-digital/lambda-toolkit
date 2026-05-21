@@ -36,6 +36,18 @@ HTTP handling, error management, and middleware for Lambda functions.
 - **Error Handler**: Standardized HTTP error responses
 - **Headers**: Stage-specific security and CORS headers
 
+### [Types](./types/README.md)
+
+Shared enums and TypeScript types for stages, regions, events, resource naming, and tagging. For CDK and tests that do not need Lambda handlers, prefer importing from **`@leighton-digital/lambda-toolkit/types`** so `@middy/*` is not loaded (see [Sub-path entrypoints](#sub-path-entrypoints) below).
+
+## Sub-path entrypoints
+
+Use **`@leighton-digital/lambda-toolkit/types`** when you only need types from the [types](types/) module — for example in CDK stacks or Jest tests that reference `Stage` or `Region`. The root package import also re-exports these types, but it evaluates the full library graph (including HTTP handler middleware).
+
+```ts
+import { Stage, Region } from '@leighton-digital/lambda-toolkit/types';
+```
+
 ## Quick Start
 
 ### Basic HTTP Handler
