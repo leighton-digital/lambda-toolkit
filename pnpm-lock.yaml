@@ -46,8 +46,8 @@ importers:
         specifier: 7.4.0
         version: 7.4.0
       '@middy/http-error-handler':
-        specifier: 7.4.0
-        version: 7.4.0
+        specifier: 7.5.0
+        version: 7.5.0
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@25.0.2(typescript@5.9.3))
@@ -1903,12 +1903,16 @@ packages:
       '@aws/durable-execution-sdk-js':
         optional: true
 
-  '@middy/http-error-handler@7.4.0':
-    resolution: {integrity: sha512-EwnnqC35CSpCsgF/Mo5Zl1R7A/aOFsnE3ltndycLuUd+67ai27Y/giG9bbS7mYrPmizxTPCyyHG2PEqHXtlaxg==}
+  '@middy/http-error-handler@7.5.0':
+    resolution: {integrity: sha512-/r0xBN7aIq5J9ZqLmlUztpUeihvVOoFZlc8CovOICC+vOkUgHk2ZE5V4aE17RMWPPLnrqwfXhOUZkGzv888yiw==}
     engines: {node: '>=22'}
 
   '@middy/util@7.4.0':
     resolution: {integrity: sha512-TeXuwTICbLBQqiP/l54e8evbd9v7n9Mj/pMtoG2mlnfiEQ2W7uuRcN5Xq3IzcJrBD73ef4USs6eANGFkYOPgCg==}
+    engines: {node: '>=22'}
+
+  '@middy/util@7.5.0':
+    resolution: {integrity: sha512-EiP4sNNSHjSEc59SLdCJQ/Efr9olDYkuE/rPlHW42Z4pfyqQZt64sGIg410WFVsd/W5l/sSbgTo6bqeChJEPYQ==}
     engines: {node: '>=22'}
 
   '@napi-rs/wasm-runtime@1.1.4':
@@ -3764,8 +3768,8 @@ packages:
     resolution: {integrity: sha512-Qohcme7V1inbAfvjItgw0EaxVX5q2rdVEZHRBrEQdRZTssLDGsL8Lwrznl8oQ/6kuTJONLaDcGjkNP247XEhcA==}
     engines: {node: '>=10.13.0'}
 
-  enhanced-resolve@5.21.6:
-    resolution: {integrity: sha512-aNnGCvbJ/RIyWo1IuhNdVjnNF+EjH9wpzpNHt+ci/m9He9LJvUN8wrCcXjp9cWsGNAuvSpVFTx/vraAFQ8qGjQ==}
+  enhanced-resolve@5.22.0:
+    resolution: {integrity: sha512-xYcDWrpELkFzz9SpZ3PlI6Eu6eD93Yf0WLDRxikGhWJ3MAir2SNZTIVCVZqZ/NUyx8AdMc2gT9C0gPiw18kG+A==}
     engines: {node: '>=10.13.0'}
 
   entities@2.2.0:
@@ -7530,8 +7534,8 @@ packages:
     resolution: {integrity: sha512-7tP1PdV4vF+lYPnkMR0jMY5/la2ub5Fc/8VQrrU+lXkiM6C4TjVfGw7iKfyhnTQOsD+6Q/iKw0eFciziRgD58Q==}
     engines: {node: '>=10.13.0'}
 
-  webpack-sources@3.4.1:
-    resolution: {integrity: sha512-eACpxRN02yaawnt+uUNIF7Qje6A9zArxBbcAJjK1PK3S9Ycg5jIuJ8pW4q8EMnwNZCEGltcjkRx1QzOxOkKD8A==}
+  webpack-sources@3.5.0:
+    resolution: {integrity: sha512-HPuy+uuoTCaaoEoI1LQ3JN9+vrPBvEesnnX1jADHy728cHSMlq4wUc4afYqahq2B1mhQVZxCXOkNTnXltr+2vQ==}
     engines: {node: '>=10.13.0'}
 
   webpack@5.105.0:
@@ -10474,11 +10478,13 @@ snapshots:
     dependencies:
       '@middy/util': 7.4.0
 
-  '@middy/http-error-handler@7.4.0':
+  '@middy/http-error-handler@7.5.0':
     dependencies:
-      '@middy/util': 7.4.0
+      '@middy/util': 7.5.0
 
   '@middy/util@7.4.0': {}
+
+  '@middy/util@7.5.0': {}
 
   '@napi-rs/wasm-runtime@1.1.4(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
@@ -12520,7 +12526,7 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.3.3
 
-  enhanced-resolve@5.21.6:
+  enhanced-resolve@5.22.0:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.3.3
@@ -16995,7 +17001,7 @@ snapshots:
 
   webpack-sources@3.3.4: {}
 
-  webpack-sources@3.4.1:
+  webpack-sources@3.5.0:
     optional: true
 
   webpack@5.105.0(@swc/core@1.13.5):
@@ -17042,7 +17048,7 @@ snapshots:
       acorn-import-phases: 1.0.4(acorn@8.16.0)
       browserslist: 4.28.2
       chrome-trace-event: 1.0.4
-      enhanced-resolve: 5.21.6
+      enhanced-resolve: 5.22.0
       es-module-lexer: 2.1.0
       eslint-scope: 5.1.1
       events: 3.3.0
@@ -17055,7 +17061,7 @@ snapshots:
       tapable: 2.3.3
       terser-webpack-plugin: 5.6.0(@swc/core@1.13.5)(postcss@8.5.10)(webpack@5.106.2(@swc/core@1.13.5)(postcss@8.5.10))
       watchpack: 2.5.1
-      webpack-sources: 3.4.1
+      webpack-sources: 3.5.0
     transitivePeerDependencies:
       - '@minify-html/node'
       - '@swc/core'
