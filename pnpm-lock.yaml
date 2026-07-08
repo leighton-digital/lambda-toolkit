@@ -26,13 +26,13 @@ importers:
     devDependencies:
       '@aws-lambda-powertools/logger':
         specifier: 2.33.1
-        version: 2.33.1(@middy/core@7.6.8)
+        version: 2.33.1(@middy/core@7.7.0)
       '@aws-lambda-powertools/metrics':
         specifier: 2.33.1
-        version: 2.33.1(@middy/core@7.6.8)
+        version: 2.33.1(@middy/core@7.7.0)
       '@aws-lambda-powertools/tracer':
         specifier: 2.33.1
-        version: 2.33.1(@middy/core@7.6.8)
+        version: 2.33.1(@middy/core@7.7.0)
       '@biomejs/biome':
         specifier: 2.5.1
         version: 2.5.1
@@ -43,8 +43,8 @@ importers:
         specifier: 20.5.3
         version: 20.5.3
       '@middy/core':
-        specifier: 7.6.8
-        version: 7.6.8
+        specifier: 7.7.0
+        version: 7.7.0
       '@middy/http-error-handler':
         specifier: 7.6.8
         version: 7.6.8
@@ -1915,11 +1915,11 @@ packages:
       '@types/react': '>=16'
       react: '>=16'
 
-  '@middy/core@7.6.8':
-    resolution: {integrity: sha512-2jzctqFkmkFhdEZVrW8ZEyxMRAen2+PX+zNC+iDrYGYrdJ5QqtfP7NIpUUnnK1apJfXKFIvYphGRaWnsLyy1/A==}
+  '@middy/core@7.7.0':
+    resolution: {integrity: sha512-5KtRHbSZNveR+rcSbJc+8D1/QQVqs3a1ePrP0fuxr41OZodwxz1B/IwjqOjVJMdu6IxhDz5QPInAiefJUNmKpQ==}
     engines: {node: '>=22'}
     peerDependencies:
-      '@aws/durable-execution-sdk-js': ^1.0.0
+      '@aws/durable-execution-sdk-js': ^2.0.0
     peerDependenciesMeta:
       '@aws/durable-execution-sdk-js':
         optional: true
@@ -1930,6 +1930,10 @@ packages:
 
   '@middy/util@7.6.8':
     resolution: {integrity: sha512-7ZFVcrQkNY4UJsgrERAplTruYDjiEv2ZNwvW3YSl3T3Fmgw+HJV1L8BrGA53LqLxe0xb2npesh8WO3ABIPYPbQ==}
+    engines: {node: '>=22'}
+
+  '@middy/util@7.7.0':
+    resolution: {integrity: sha512-d9QHbliwIocuc2n+7dbrd9Ma/LrXaEDX5mxyV3Rqx79h7AyZGUbkXo0rw6JVVFsxOGvjNGN4gQ2fh++RLCS35A==}
     engines: {node: '>=22'}
 
   '@napi-rs/wasm-runtime@1.1.4':
@@ -7925,26 +7929,26 @@ snapshots:
     dependencies:
       '@aws/lambda-invoke-store': 0.2.4
 
-  '@aws-lambda-powertools/logger@2.33.1(@middy/core@7.6.8)':
+  '@aws-lambda-powertools/logger@2.33.1(@middy/core@7.7.0)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.33.1
       '@aws/lambda-invoke-store': 0.2.4
     optionalDependencies:
-      '@middy/core': 7.6.8
+      '@middy/core': 7.7.0
 
-  '@aws-lambda-powertools/metrics@2.33.1(@middy/core@7.6.8)':
+  '@aws-lambda-powertools/metrics@2.33.1(@middy/core@7.7.0)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.33.1
       '@aws/lambda-invoke-store': 0.2.4
     optionalDependencies:
-      '@middy/core': 7.6.8
+      '@middy/core': 7.7.0
 
-  '@aws-lambda-powertools/tracer@2.33.1(@middy/core@7.6.8)':
+  '@aws-lambda-powertools/tracer@2.33.1(@middy/core@7.7.0)':
     dependencies:
       '@aws-lambda-powertools/commons': 2.33.1
       aws-xray-sdk-core: 3.12.0
     optionalDependencies:
-      '@middy/core': 7.6.8
+      '@middy/core': 7.7.0
 
   '@aws-sdk/types@3.973.12':
     dependencies:
@@ -10538,15 +10542,17 @@ snapshots:
       '@types/react': 19.2.14
       react: 19.2.7
 
-  '@middy/core@7.6.8':
+  '@middy/core@7.7.0':
     dependencies:
-      '@middy/util': 7.6.8
+      '@middy/util': 7.7.0
 
   '@middy/http-error-handler@7.6.8':
     dependencies:
       '@middy/util': 7.6.8
 
   '@middy/util@7.6.8': {}
+
+  '@middy/util@7.7.0': {}
 
   '@napi-rs/wasm-runtime@1.1.4(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
@@ -13307,7 +13313,7 @@ snapshots:
 
   history@4.10.1:
     dependencies:
-      '@babel/runtime': 7.29.2
+      '@babel/runtime': 7.29.7
       loose-envify: 1.4.0
       resolve-pathname: 3.0.0
       tiny-invariant: 1.3.3
