@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/leighton-digital/lambda-toolkit/compare/v1.4.1...v1.5.0) (2026-09-10)
+
+
+### Bug Fixes
+
+* **types:** snapshot require.cache before require to avoid flaky test ([ac5e9f1](https://github.com/leighton-digital/lambda-toolkit/commit/ac5e9f14bc42dc7ec6034f760bec9bb3297a326f))
+
+
+### Features
+
+* **types:** add sub-path entrypoints for types and update documentation ([13b9c62](https://github.com/leighton-digital/lambda-toolkit/commit/13b9c623a4a083d32a1122758f7942ffe9174b1f))
+
 ## [1.4.1](https://github.com/leighton-digital/lambda-toolkit/compare/v1.4.0...v1.4.1) (2026-03-18)
 
 # [1.4.0](https://github.com/leighton-digital/lambda-toolkit/compare/v1.3.1...v1.4.0) (2026-03-05)
