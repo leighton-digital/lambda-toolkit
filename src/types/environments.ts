@@ -16,7 +16,6 @@ export enum Region {
   stockholm = 'eu-north-1',
   milan = 'eu-south-1',
   paris = 'eu-west-3',
-  ireland = 'eu-west-1',
   capeTown = 'af-south-1',
   bahrain = 'me-south-1',
   singapore = 'ap-southeast-1',

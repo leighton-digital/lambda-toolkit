@@ -25,34 +25,33 @@ describe('getters', () => {
       { envValue: 'valid_string', expected: 'valid_string' },
       { envValue: 'ab', expected: 'ab' },
       { envValue: 'a'.repeat(100), expected: 'a'.repeat(100) },
-    ])(
-      'should return a valid string when environment variable $envValue is set correctly as $expected',
-      ({ envValue, expected }) => {
-        process.env.TEST_STRING = envValue;
+    ])('should return a valid string when environment variable $envValue is set correctly as $expected', ({
+      envValue,
+      expected,
+    }) => {
+      process.env.TEST_STRING = envValue;
 
-        const result = getString('TEST_STRING');
-        expect(result).toBe(expected);
-      },
-    );
+      const result = getString('TEST_STRING');
+      expect(result).toBe(expected);
+    });
 
     it.each([
       { envValue: undefined, description: 'undefined' },
       { envValue: 'a'.repeat(1001), description: 'too long' },
       { envValue: '', description: 'empty string' },
-    ])(
-      'should throw error due to "$description" when environment variable is set to $envValue',
-      ({ envValue }) => {
-        if (envValue === undefined) {
-          delete process.env.TEST_STRING;
-        } else {
-          process.env.TEST_STRING = envValue;
-        }
+    ])('should throw error due to "$description" when environment variable is set to $envValue', ({
+      envValue,
+    }) => {
+      if (envValue === undefined) {
+        delete process.env.TEST_STRING;
+      } else {
+        process.env.TEST_STRING = envValue;
+      }
 
-        expect(() => getString('TEST_STRING')).toThrow(
-          'Invalid environment variable: TEST_STRING',
-        );
-      },
-    );
+      expect(() => getString('TEST_STRING')).toThrow(
+        'Invalid environment variable: TEST_STRING',
+      );
+    });
   });
 
   describe('getEnvVarBoolean', () => {
@@ -61,36 +60,35 @@ describe('getters', () => {
       { envValue: 'TRUE', expected: true },
       { envValue: 'false', expected: false },
       { envValue: 'FALSE', expected: false },
-    ])(
-      'should return $expected when environment variable is $envValue',
-      ({ envValue, expected }) => {
-        process.env.TEST_BOOLEAN = envValue;
+    ])('should return $expected when environment variable is $envValue', ({
+      envValue,
+      expected,
+    }) => {
+      process.env.TEST_BOOLEAN = envValue;
 
-        const result = getBoolean('TEST_BOOLEAN');
+      const result = getBoolean('TEST_BOOLEAN');
 
-        expect(result).toBe(expected);
-      },
-    );
+      expect(result).toBe(expected);
+    });
 
     it.each([
       { envValue: undefined, description: 'undefined' },
       { envValue: 'maybe', description: 'not "true" or "false"' },
       { envValue: 'toolong', description: 'too long' },
       { envValue: '', description: 'empty string' },
-    ])(
-      'should throw error due to "$description" when environment variable is set to $envValue',
-      ({ envValue }) => {
-        if (envValue === undefined) {
-          delete process.env.TEST_BOOLEAN;
-        } else {
-          process.env.TEST_BOOLEAN = envValue;
-        }
+    ])('should throw error due to "$description" when environment variable is set to $envValue', ({
+      envValue,
+    }) => {
+      if (envValue === undefined) {
+        delete process.env.TEST_BOOLEAN;
+      } else {
+        process.env.TEST_BOOLEAN = envValue;
+      }
 
-        expect(() => getBoolean('TEST_BOOLEAN')).toThrow(
-          'Invalid environment variable: TEST_BOOLEAN',
-        );
-      },
-    );
+      expect(() => getBoolean('TEST_BOOLEAN')).toThrow(
+        'Invalid environment variable: TEST_BOOLEAN',
+      );
+    });
   });
 
   describe('getEnvVarNumber', () => {
@@ -100,16 +98,16 @@ describe('getters', () => {
       { envValue: '-123', expected: -123 },
       { envValue: '3.14', expected: 3.14 },
       { envValue: '1234567890', expected: 1234567890 },
-    ])(
-      'should successfully parse $envValue as $expected',
-      ({ envValue, expected }) => {
-        process.env.TEST_NUMBER = envValue;
+    ])('should successfully parse $envValue as $expected', ({
+      envValue,
+      expected,
+    }) => {
+      process.env.TEST_NUMBER = envValue;
 
-        const result = getNumber('TEST_NUMBER');
+      const result = getNumber('TEST_NUMBER');
 
-        expect(result).toBe(expected);
-      },
-    );
+      expect(result).toBe(expected);
+    });
 
     it.each([
       { envValue: undefined, description: 'undefined' },
@@ -117,20 +115,19 @@ describe('getters', () => {
       { envValue: '', description: 'empty string' },
       { envValue: '12345678901', description: 'too long' },
       { envValue: '   ', description: 'contains only spaces' },
-    ])(
-      'should throw error due to "$description" when environment variable is set to $envValue',
-      ({ envValue }) => {
-        if (envValue === undefined) {
-          delete process.env.TEST_NUMBER;
-        } else {
-          process.env.TEST_NUMBER = envValue;
-        }
+    ])('should throw error due to "$description" when environment variable is set to $envValue', ({
+      envValue,
+    }) => {
+      if (envValue === undefined) {
+        delete process.env.TEST_NUMBER;
+      } else {
+        process.env.TEST_NUMBER = envValue;
+      }
 
-        expect(() => getNumber('TEST_NUMBER')).toThrow(
-          'Invalid environment variable: TEST_NUMBER',
-        );
-      },
-    );
+      expect(() => getNumber('TEST_NUMBER')).toThrow(
+        'Invalid environment variable: TEST_NUMBER',
+      );
+    });
   });
 
   describe('getStrings', () => {
